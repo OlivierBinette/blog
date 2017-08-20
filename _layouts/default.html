@@ -30,7 +30,16 @@
         <ul></ul>
       </nav>
       <section>
-        {{ content }}
+        <!--{{ content }}-->
+        {% for post in site.posts %}
+
+        <h1>{{post.title}}</h1>
+        {{post.content}}
+        <span id="separator" style="postition:center;"> -----</span>
+
+        {% endfor %}
+
+
 
         <ul>
           {% for post in site.posts %}
