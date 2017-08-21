@@ -16,7 +16,8 @@ baseurl: /blog
 github: ''
 
 # Set this to your UA-# value, or '' to disable the block completely
-gaaccount: ''
+gaaccount: UA-105034062-1
+
 
 # The 'comments' setting enables comments. You'll need to select either
 # disqus or isso below to choose a comment system. Individual posts can

@@ -68,3 +68,10 @@ body {
 .author a {
     color: #ee4444;
 }
+footer {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    bottom: 0;
+}
