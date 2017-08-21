@@ -41,22 +41,22 @@ body {
     padding-top: 0;
 }
 
-.well h1 {
+ h1 {
     color: #ee4444;
     font-size: 1.4em;
 }
 
-.well h2 {
+ h2 {
     color: #ee4444;
     font-size: 1.2em;
 }
 
-.well h3 {
+ h3 {
     font-style: italic;
     font-size: 1.1em;
 }
 
-.well h4 {
+ h4 {
     font-style: italic;
     font-size: 1em;
 }
