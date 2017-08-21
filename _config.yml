@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: Math. Stat. Notes
-description: 
+description: ''
 
 # url is currently only used only for the RSS feed in feed.xml
 url: ''
@@ -10,7 +10,7 @@ url: ''
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: /blog
+baseurl: /jekyll-clean
 
 # This can be '' to hide the Github nav button
 github: ''
@@ -27,7 +27,7 @@ comments: true
 isso: ''
 
 # Set this to your disqus shortname to enable comments via disqus. Set to '' to disable disqus.
-disqus: 'mathstatnotes'
+disqus: mathstatnotes
 
 permalink: /:year/:month/:title
 paginate: 3
@@ -36,4 +36,4 @@ highlighter: rouge
 markdown: kramdown
 gems: ['jekyll-paginate']
 
-exclude: ['README.md']
+exclude: []

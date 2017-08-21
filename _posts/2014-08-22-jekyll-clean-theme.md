@@ -5,8 +5,6 @@ date: 2014-08-22 16:25:06 -0700
 comments: false
 ---
 
-$$f(x) = x^2$$
-
 * Get it from [github](https://github.com/scotte/jekyll-clean).
 * See the [live demo](https://scotte.github.io/jekyll-clean).
 * See it [in action on my own blog](https://scotte.org).
