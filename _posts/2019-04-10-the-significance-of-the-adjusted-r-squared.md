@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Significance of the Adjusted R Squared Coefficient
-categories: [Classical stats]
+categories: [Classical stats, Regression]
 ---
 
 My friend [Anthony Coache](https://anthonycoache.ca/) and I have been curious about uses and misuses of the *adjusted* $R^2​$ coefficient which comes up in linear regression for model comparison and as a measure of "goodness of fit". We were underwhelmed by the depth of the literature arguing for its use, and wanted to show exactly how it behaves under certain sets of assumptions. Investigating the issue brought us to re-interpret the adjusted $R^2​$ and to highlight a new distribution-free perspective on nested model comparison which is equivalent, under Gaussian assumptions, to Fisher's classical $F​$-test. This generalizes to nested GLMs comparison and provides exact comparison tests that are not based on asymptotic approximations. We still have many questions to answer, but here's some of what we've done.
