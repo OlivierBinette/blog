@@ -163,3 +163,12 @@ This is a monotonous invertible transform of $\|P_\omega \hat \varepsilon\|^2/\|
 We have highlighted dual perspectives on nested models comparison. An increase of $R^2$ may be due to random noise that correlates with fixed regressors, or to random regressors that correlate with fixed observations. Fisher's test of the first hypothesis is equivalent to the $R^2_a$ test of the second. Furthermore, we showed that $R^2_a$ compensates properly, on the average, for both types of inflation of $R^2$. We suggest this provides a clear explanation of what $R^2_a$ exactly adjusts for and how it can properly be used for models comparison.
 
 Furthermore, the fact that random covariate tests, conditional on the observations, can be carried out exactly using any measure of goodness of fit (e.g. the likelihood or the AIC) suggests that our approach may be helpful in devising nested model comparison tests for GLMs. Testing at a chosen confidence level also provides more flexibility than using a rule-based procedure such as the AIC.
+
+**References**
+
+  - Cramer, J. S. (1987). Mean and variance of r2 in small and moderate samples. *Journal of Econometrics 35(2)*, 253 – 266.
+  - Helland, I. S. (1987). On the interpretation and use of r2 in regression analysis. *Biometrics 43(1)*, 61–69.
+  - Meepagala, G. (1992). The small sample properties of r2 in a misspecified regression model with stochastic regressors. *Economics Letters 40(1)*, 1 – 6.
+  - Ohtani, K. and H. Tanizaki (2004). Exact distributions of r2 and adjusted r2 ina linear regression model with multivariate t error terms. *Journal of the Japan Statistical Society 34(1)*, 101–109.
+  - Olkin, I. and J. W. Pratt (1958). Unbiased estimation of certain correlation coeffi-cients. *The Annals of Mathematical Statistics 29(1)*, 201–211.
+  - Theil, H. (1971). *Principles of econometrics (1 ed.)*. New York: J. Wiley.
