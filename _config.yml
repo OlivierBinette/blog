@@ -7,7 +7,6 @@ author: "John Doe"
 
 # Build settings
 kramdown:
-  input: GFM
 permalink: pretty
 
 # Third-party services
@@ -16,8 +15,5 @@ google_analytics:
 disqus_shortname:
 
 plugins:
-  - jekyll-sitemap
-
-exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
 
 remote_theme: heiswayi/textlog
