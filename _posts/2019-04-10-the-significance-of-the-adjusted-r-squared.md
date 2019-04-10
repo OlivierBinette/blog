@@ -8,7 +8,7 @@ My friend [Anthony Coache](https://anthonycoache.ca/) and I have been curious ab
 
 <!--more-->
 
-So, in the context of least squares linear regression, the model for relating a vector of $n​$ observed responses $Y​$ to $p-1​$ independent covariates is $Y = X \beta + \varepsilon​$, where $X​$ is the design matrix and $\varepsilon​$ is the vector of random errors. One of many summary statistics arising from data analyses based on this model is the adjusted $R^2​$ coefficient, defined as 
+So, in the context of least squares linear regression, the model for relating a vector of $n​$ observed responses $Y​$ to $p-1​$ independent covariates is $Y = X \beta + \varepsilon​$, where $X​$ is the design matrix and $\varepsilon​$ is the vector of random errors. One of many summary statistics arising from data analyses based on this model is the adjusted $R^2​$ coefficient, defined as
 
 $$R^2_a(Y, X) = 1 - \frac{\|\hat \varepsilon\|^2}{\left\|Y - \bar Y \right\|^2}\frac{n-1}{n-p},​$$
 
@@ -31,11 +31,11 @@ Suppose we have two design matrices $X​$ and $\tilde X​$, where $\text{Span}
 $$
 F = \frac{\| \hat Y_0 - \hat Y \|^2}{\| Y - \hat Y \|^2} \frac{n - \tilde p }{k},
 $$
-where $\hat Y_0 = P_X Y​$ and $\hat Y = P_{\tilde X}Y​$. This is a function of both $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$, which, under the assumption 
+where $\hat Y_0 = P_X Y​$ and $\hat Y = P_{\tilde X}Y​$. This is a function of both $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$, which, under the assumption
 $$
 H_0: \quad Y = X \beta + \varepsilon
 $$
-for $\varepsilon \sim N(0, \sigma^2 I_n)$, has an $F$-distribution. 
+for $\varepsilon \sim N(0, \sigma^2 I_n)$, has an $F$-distribution.
 
 This is, however, a rather convoluted way of going about comparing the two numbers $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$. Can we do simpler, and can we drop the Gaussian assumption? The answer is yes, although we'll have to change a bit our point of view on the problem.
 
@@ -50,7 +50,7 @@ Hence, rather than testing the model $Y = X\beta + \varepsilon$ under a Gaussian
 $$
 H_0':\quad \text{the complement of $\text{Span}(X)$ in $\text{Span}(\tilde X)$ is a random subspace.}
 $$
-This test can be carried out using any test statistic $T$, and obviously the distribution of $T$ under $H_0'$ (and conditionally on $Y$), will not depend on the unknown parameter $\beta$ nor on the noise structure $\varepsilon$ (which has been conditionned out of randomness). In particular, we can take $T = R^2_a(Y, \tilde X)$. 
+This test can be carried out using any test statistic $T$, and obviously the distribution of $T$ under $H_0'$ (and conditionally on $Y$), will not depend on the unknown parameter $\beta$ nor on the noise structure $\varepsilon$ (which has been conditionned out of randomness). In particular, we can take $T = R^2_a(Y, \tilde X)$.
 
 Does it make any sense? Well it does not change anything! The test obtained in this framework is entirely equivalent to Fisher's $F$-test we reviewed before: for any given observation of $Y$, $X$ and $\tilde X​$, the two tests will give the same results.
 
@@ -58,7 +58,7 @@ Let me make all of this more precise.
 
 ### Some precisions
 
-Let $\tilde X = [X \; W] \in \mathbb{R}^{n \times \tilde p}​$ be the concatenation of $X​$ with a matrix $W = [W_1 \, \cdots \, W_k]​$ of $k​$ new covariates. The goal is to test whether or not $R^2_a(Y, \tilde X)​$ has significantly increased from $R^2_a(Y, X)​$. Henceforth, we shall assume that both $Y​$ and $X​$ are fixed and the null hypothesis is 
+Let $\tilde X = [X \; W] \in \mathbb{R}^{n \times \tilde p}​$ be the concatenation of $X​$ with a matrix $W = [W_1 \, \cdots \, W_k]​$ of $k​$ new covariates. The goal is to test whether or not $R^2_a(Y, \tilde X)​$ has significantly increased from $R^2_a(Y, X)​$. Henceforth, we shall assume that both $Y​$ and $X​$ are fixed and the null hypothesis is
 $$
 H_0':\; \text{ the } W_i \text{ are independent and of uniformly distributed directions.}
 $$
@@ -110,13 +110,13 @@ $$
 $$
 where $K = \mathbb{E}\left[\frac{Z_1^2}{Z_1^2 + \chi^2_{n - 2} (\lambda)}\right]$ and $\chi^2_{n-2}(\lambda)$ is a new and independent noncentral $\chi^2​$ random variable. It follows that
 $$
-    \mathbb{E} \left[R^2_a(Y, \tilde X) \right] = 1 - (n-1)K 
+    \mathbb{E} \left[R^2_a(Y, \tilde X) \right] = 1 - (n-1)K
 $$
 depends on $\tilde X$ only through $X$ and must equal $\mathbb{E} \left[R^2_a(Y, X) \right]$. $\Box$
 
 ### Relationship with Fisher's $F$-test
 
-In the context of Proposition 2, suppose in particular that $\tilde X = [X \; W]$, where $W = [W_1\, \cdots \, W_k]$ is a matrix of additional fixed regressors. Recall that the $F$-statistic for Fisher's test with nested models of $p$ and $\tilde p = p + k$ parameters respectively is given by 
+In the context of Proposition 2, suppose in particular that $\tilde X = [X \; W]$, where $W = [W_1\, \cdots \, W_k]$ is a matrix of additional fixed regressors. Recall that the $F$-statistic for Fisher's test with nested models of $p$ and $\tilde p = p + k$ parameters respectively is given by
 $$
 F = \frac{\| \hat Y_0 - \hat Y \|^2}{\| Y - \hat Y \|^2} \frac{n - \tilde p }{k},
 $$
@@ -130,9 +130,8 @@ $$
 $$
 This is a monotonous invertible transform of $\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2​$ which, under $H_0^{\text{Gauss}}​$, follows a Beta distribution of parameters $k/2​$ and $(n-\tilde p)/2​$. Yet in the framework of Section 2 and under $H_0​$, where now $\omega​$ is random and $\hat \varepsilon​$ fixed, the test statistic $R^2_a(Y, \tilde X)​$ is also a monotonous invertible function of $\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2 \sim \text{Beta}(k/2, (n-\tilde p)/2)​$. This shows that the two unilateral tests are equivalent: the same observations yield the same $p​$-values.
 
-##Discussion
+## Discussion
 
 We have highlighted dual perspectives on nested models comparison. An increase of $R^2$ may be due to random noise that correlates with fixed regressors, or to random regressors that correlate with fixed observations. Fisher's test of the first hypothesis is equivalent to the $R^2_a$ test of the second. Furthermore, we showed that $R^2_a$ compensates properly, on the average, for both types of inflation of $R^2$. We suggest this provides a clear explanation of what $R^2_a$ exactly adjusts for and how it can properly be used for models comparison.
 
-Furthermore, the fact that random covariate tests, conditional on the observations, can be carried out exactly using any measure of goodness of fit (e.g. the likelihood or the AIC) suggests that our approach may be helpful in devising nested model comparison tests for GLMs. Testing at a chosen confidence level also provides more flexibility than using a rule-based procedure such as the AIC. 
-
+Furthermore, the fact that random covariate tests, conditional on the observations, can be carried out exactly using any measure of goodness of fit (e.g. the likelihood or the AIC) suggests that our approach may be helpful in devising nested model comparison tests for GLMs. Testing at a chosen confidence level also provides more flexibility than using a rule-based procedure such as the AIC.
