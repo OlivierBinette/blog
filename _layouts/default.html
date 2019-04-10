@@ -3,10 +3,11 @@
 
   {% include head.html %}
 
-  <body style="background: radial-gradient(circle, white, lightgrey);">
+  <body>
+
+    <div style="display:float; width:100vw; height:100vh; background: radial-gradient(circle, white, lightgrey);"></div>
 
     <div class="container content">
-      <div class="content-wrapper">
       <header class="masthead">
         <h3 class="masthead-title">
           <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
@@ -23,7 +24,6 @@
           <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a> <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> <a href="http://olivierbinette.ca">Olivier Binette</a>.
         </tiny>
       </footer>
-      </div>
     </div>
 
     {% if site.analytics_id %}
