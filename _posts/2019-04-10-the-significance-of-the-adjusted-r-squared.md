@@ -124,7 +124,7 @@ $$
 for independent $Z_i \sim N(0,1)$ and $\chi^2_ {\tilde p - 1} (\lambda)$ a noncentral $\chi^2$ random variable of parameter $\lambda$. Hence
 
 $$
-\mathbb{E}\left[ \frac{|\hat \varepsilon^{}|^2}{\left|Y - \bar Y\right|^2} \right] = (n-\tilde p) \mathbb{E}\left[\frac{Z_1^2}{\sum{i=1}^{n - \tilde p} Z_i^2 + \chi^2{\tilde p -1} (\lambda)}\right]
+\mathbb{E}\left[ \frac{\|\hat \varepsilon^{}\|^2}{\left\|Y - \bar Y\right\|^2} \right] = (n-\tilde p) \mathbb{E}\left[\frac{Z_1^2}{\sum{i=1}^{n - \tilde p} Z_i^2 + \chi^2{\tilde p -1} (\lambda)}\right]
     = (n-\tilde p)K,
 $$
 
