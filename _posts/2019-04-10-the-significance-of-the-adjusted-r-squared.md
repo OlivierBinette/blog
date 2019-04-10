@@ -27,7 +27,7 @@ The commonly used linear regression model is $$Y = X \beta + \varepsilon,​$$ w
 
 ## Testing for an increase of $R^2_a$
 
-Suppose we have two design matrices $X​$ and $\tilde X​$, where $\text{Span}(X) \subset \text{Span}(\tilde X)​$. Let $p=\text{rank}(X)​$ and $\tilde p = \text{rank}(\tilde X) = p+k​$. Given the vector of observations $Y​$, we observe two values $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$ associated to the nested models. The classical way to test for a significant increase of $R^2_a​$ is to carry out Fisher's $F​$-test based on the statistics
+Suppose we have two design matrices $X​$ and $\tilde X​$, where $\text{Span}(X) \subset \text{Span}(\tilde X)​$. Let $p=\text{rank}(X)​$ and $\tilde p = \text{rank}(\tilde X) = p+k​$. Given the vector of observations $Y​$, we observe two values $R^2 _ a (Y, X)​$ and $R^2_ a (Y, \tilde X)​$ associated to the nested models. The classical way to test for a significant increase of $R^2 _ a​$ is to carry out Fisher's $F​$-test based on the statistics
 $$
 F = \frac{\| \hat Y_0 - \hat Y \|^2}{\| Y - \hat Y \|^2} \frac{n - \tilde p }{k},
 $$
