@@ -31,7 +31,7 @@ Suppose we have two design matrices $X​$ and $\tilde X​$, where $\text{Span}
 $$
 F = \frac{\| \hat Y_0 - \hat Y \|^2}{\| Y - \hat Y \|^2} \frac{n - \tilde p }{k},
 $$
-where $\hat Y_0 = P_X Y​$ and $\hat Y = P_{\tilde X}Y​$. This is a function of both $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$, which, under the assumption
+where $\hat Y_0 = P_X Y​$ and $\hat Y = P_ {\tilde X}Y​$. This is a function of both $R^2_a(Y, X)​$ and $R^2_a(Y, \tilde X)​$, which, under the assumption
 $$
 H_0: \quad Y = X \beta + \varepsilon
 $$
@@ -76,7 +76,7 @@ $$
 *where $\text{Beta}\left(\tfrac{(n-\tilde p)}{2}, \tfrac{k}{2} \right)​$ is a Beta random variable of parameters $(n-\tilde p)/2​$ and $k/2​$.*
 
 **Proof.**
-Let $\omega$ be the projection of $[W_1 \, \cdots \, W_k]$ on the orthogonal $V$ of $\text{Span}(X)$ and denote by $P_\omega$ the orthogonal projection onto $V_\omega =  \text{Span}(\omega)$. By the Pythagorean theorem we have $\|Y - P_{\tilde X} Y \|^2 + \|P_\omega \hat \varepsilon\|^2 = \|\hat \varepsilon\|^2$ and hence we may write
+Let $\omega$ be the projection of $[W_1 \, \cdots \, W_k]$ on the orthogonal $V$ of $\text{Span}(X)$ and denote by $P_\omega$ the orthogonal projection onto $V_\omega =  \text{Span}(\omega)$. By the Pythagorean theorem we have $\|Y - P_ {\tilde X} Y \|^2 + \|P_\omega \hat \varepsilon\|^2 = \|\hat \varepsilon\|^2$ and hence we may write
 $$
     R^2_a(Y, \tilde X) = 1- \frac{(n-1)\|\hat \varepsilon\|^2}{(n-\tilde p) \left\| Y - \bar Y\right\|^2} \left(1 - \frac{\|P_\omega \hat \varepsilon\|^2}{\|\hat \varepsilon\|^2} \right).
 $$
@@ -100,16 +100,16 @@ $$
 More precisely, we know the conditional distribution of $R^2_a(Y, \tilde X)$ given $R^2_a(Y, X)$: it is the same as the distribution which appears in the context of Proposition 1. The above results then follows from a simple computation.
 
 **Proof.**
-Let $\hat \varepsilon^{\*} = Y - P_{\tilde X} Y$ and write $\lambda = \left\|\mathbb{E}\left[Y - \bar Y\right]\right\|^2/\sigma^2$. Then $\frac{\|\hat \varepsilon^{\*}\|^2}{\left\|Y - \bar Y\right\|^2}$ is distributed as
+Let $\hat \varepsilon^{\*} = Y - P_ {\tilde X} Y$ and write $\lambda = \left\|\mathbb{E}\left[Y - \bar Y\right]\right\|^2/\sigma^2$. Then $\frac{\|\hat \varepsilon^{\*}\|^2}{\left\|Y - \bar Y\right\|^2}$ is distributed as
 $$
-    \frac{\sum_{i=1}^{n - \tilde p} Z_i^2}{\sum_{i=1}^{n - \tilde p} Z_i^2 + \chi^2_{\tilde p -1} (\lambda)}
+    \frac{\sum_ {i=1}^{n - \tilde p} Z_i^2}{\sum_ {i=1}^{n - \tilde p} Z_i^2 + \chi^2_ {\tilde p -1} (\lambda)}
 $$
-for independent $Z_i \sim N(0,1)$ and $\chi^2_{\tilde p -1} (\lambda)$ a noncentral $\chi^2$ random variable of parameter $\lambda$. Hence
+for independent $Z_i \sim N(0,1)$ and $\chi^2_ {\tilde p - 1} (\lambda)$ a noncentral $\chi^2$ random variable of parameter $\lambda$. Hence
 $$
 \mathbb{E}\left[ \frac{|\hat \varepsilon^{}|^2}{\left|Y - \bar Y\right|^2} \right] = (n-\tilde p) \mathbb{E}\left[\frac{Z_1^2}{\sum{i=1}^{n - \tilde p} Z_i^2 + \chi^2{\tilde p -1} (\lambda)}\right]
     = (n-\tilde p)K,
 $$
-where $K = \mathbb{E}\left[\frac{Z_1^2}{Z_1^2 + \chi^2_{n - 2} (\lambda)}\right]$ and $\chi^2_{n-2}(\lambda)$ is a new and independent noncentral $\chi^2​$ random variable. It follows that
+where $K = \mathbb{E}\left[\frac{Z_1^2}{Z_1^2 + \chi^2_ {n - 2} (\lambda)}\right]$ and $\chi^2_ {n-2}(\lambda)$ is a new and independent noncentral $\chi^2​$ random variable. It follows that
 $$
     \mathbb{E} \left[R^2_a(Y, \tilde X) \right] = 1 - (n-1)K
 $$
@@ -121,7 +121,7 @@ In the context of Proposition 2, suppose in particular that $\tilde X = [X \; W]
 $$
 F = \frac{\| \hat Y_0 - \hat Y \|^2}{\| Y - \hat Y \|^2} \frac{n - \tilde p }{k},
 $$
-where $\hat Y_0 = P_X Y​$ and $\hat Y = P_{\tilde X} Y ​$ are the vector of predicted values for the models correponding to $X​$ and $\tilde X​$. The test of significance devised in Section 2, based on $R^2_a(Y, \tilde X)​$, is then equivalent to Fisher's $F​$-test of the hypothesis
+where $\hat Y_0 = P_X Y​$ and $\hat Y = P_ {\tilde X} Y ​$ are the vector of predicted values for the models correponding to $X​$ and $\tilde X​$. The test of significance devised in Section 2, based on $R^2_a(Y, \tilde X)​$, is then equivalent to Fisher's $F​$-test of the hypothesis
 $$
 H_0^{\text{Gauss}}:\; Y = X\beta + \varepsilon\, \text{ where }\,\varepsilon \sim N(0, \sigma^2 I_n).
 $$
