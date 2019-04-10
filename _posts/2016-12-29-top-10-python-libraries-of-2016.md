@@ -9,6 +9,8 @@ Last year, we did a recap with what we thought were the [best Python libraries o
 
 Again, we try to avoid most established choices such as Django, Flask, etc. that are kind of standard nowadays. Also, some of these libraries date prior to 2016, but either they had an explosion in popularity this year or we think they are great enough to deserve the spot. Here we go!
 
+<!--more-->
+
 ## 1. [Zappa](https://www.zappa.io/)
 
 Since the release of [AWS Lambda](https://aws.amazon.com/lambda/details/) (and [others](https://cloud.google.com/functions/docs/) that [have](https://azure.microsoft.com/en-us/services/functions/) [followed](https://www.ibm.com/cloud-computing/bluemix/openwhisk)), all the rage has been about [serverless architectures](http://martinfowler.com/articles/serverless.html). These allow microservices to be deployed in the cloud, in a fully managed environment where one doesn’t have to care about managing any server, but is assigned stateless, ephemeral _computing containers_ that are fully managed by a provider. With this paradigm, events (such as a traffic spike) can trigger the execution of more of these _containers_ and therefore give the possibility to handle “infinite” horizontal scaling.
