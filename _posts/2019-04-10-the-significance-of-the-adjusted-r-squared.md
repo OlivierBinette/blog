@@ -69,11 +69,11 @@ Let $Y \in \mathbb{R}^n​$ and $X \in \mathbb{R}^{n \times p}​$ be fixed and 
 $$
 \mathbb{E}\left[ R^2_a(Y, \tilde X) \right] = R^2_a(Y, X).
 $$
-*and, more precisely, under $H_0$ we have that $R^2_a(Y, \tilde X)$ is distributed as*
+and, more precisely, under $H_0$ we have that $R^2_a(Y, \tilde X)$ is distributed as
 $$
 1-  \frac{(n-1)\| \hat \varepsilon \|^2}{(n-\tilde p) \| Y - \bar Y \|^2}\text{Beta}\left(\tfrac{n-\tilde p}{2}, \tfrac{k}{2} \right)
 $$
-*where $\text{Beta}\left(\tfrac{(n-\tilde p)}{2}, \tfrac{k}{2} \right)​$ is a Beta random variable of parameters $(n-\tilde p)/2​$ and $k/2​$.*
+where $\text{Beta}\left(\tfrac{(n-\tilde p)}{2}, \tfrac{k}{2} \right)​$ is a Beta random variable of parameters $(n-\tilde p)/2​$ and $k/2​$.
 
 **Proof.**
 Let $\omega$ be the projection of $[W_1 \, \cdots \, W_k]$ on the orthogonal $V$ of $\text{Span}(X)$ and denote by $P_\omega$ the orthogonal projection onto $V_\omega =  \text{Span}(\omega)$. By the Pythagorean theorem we have $\|Y - P_ {\tilde X} Y \|^2 + \|P_\omega \hat \varepsilon\|^2 = \|\hat \varepsilon\|^2$ and hence we may write
@@ -91,7 +91,7 @@ While the preceding analysis was conditional on the observation of $Y$, suppose 
 However, as shown in Cramer (1987), the adjusted $R^2​$ coefficient can still be understood as compensating for irrelevant covariates: in a correctly specified model, its expected value is invariant under the addition of covariates. This is formalized in Proposition 2 below. We preferred a more elementary proof than found therein, avoiding the rather involved explicit expression of the expected value that depends on the unknown parameter $\beta​$.
 
 **Proposition 2.**
-*Suppose $Y = X \beta + \varepsilon$, where $\beta \in \mathbb{R}^{p}$ and $\varepsilon \sim N(0, \sigma^2 I_n)$ is Gaussian noise. If $\tilde X$ is another design matrix of rank $\tilde p$ such that $\text{Span}(X) \subset \text{Span}(\tilde X)​$, then*
+Suppose $Y = X \beta + \varepsilon$, where $\beta \in \mathbb{R}^{p}$ and $\varepsilon \sim N(0, \sigma^2 I_n)$ is Gaussian noise. If $\tilde X$ is another design matrix of rank $\tilde p$ such that $\text{Span}(X) \subset \text{Span}(\tilde X)​$, then
 $$
 \mathbb{E}\left[ R^2_a(Y, \tilde X) \right] = \mathbb{E}\left[R^2_a(Y, X)\right].
 $$
