@@ -2,8 +2,8 @@
 permalink:           pretty
 
 # Setup
-title:               Math Stat Notes
-tagline:             Expository notes and skywriting
+title:               Olivier's Open Notebook
+tagline:             An open lab book
 url:                 http://olivierbinette.ca
 paginate:            5
 baseurl:             "/blog"
