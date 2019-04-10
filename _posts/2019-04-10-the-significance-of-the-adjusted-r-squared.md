@@ -95,11 +95,12 @@ However, as shown in Cramer (1987), the adjusted $R^2​$ coefficient can still 
 $$
 \mathbb{E}\left[ R^2_a(Y, \tilde X) \right] = \mathbb{E}\left[R^2_a(Y, X)\right].
 $$
+
 **Remark.**
 More precisely, we know the conditional distribution of $R^2_a(Y, \tilde X)$ given $R^2_a(Y, X)$: it is the same as the distribution which appears in the context of Proposition 1. The above results then follows from a simple computation.
 
 **Proof.**
-Let $\hat \varepsilon^{*} = Y - P_{\tilde X} Y$ and write $\lambda = \left\|\mathbb{E}\left[Y - \bar Y\right]\right\|^2/\sigma^2$. Then $\frac{\|\hat \varepsilon^{*}\|^2}{\left\|Y - \bar Y\right\|^2}$ is distributed as
+Let $\hat \varepsilon^{\*} = Y - P_{\tilde X} Y$ and write $\lambda = \left\|\mathbb{E}\left[Y - \bar Y\right]\right\|^2/\sigma^2$. Then $\frac{\|\hat \varepsilon^{\*}\|^2}{\left\|Y - \bar Y\right\|^2}$ is distributed as
 $$
     \frac{\sum_{i=1}^{n - \tilde p} Z_i^2}{\sum_{i=1}^{n - \tilde p} Z_i^2 + \chi^2_{\tilde p -1} (\lambda)}
 $$
