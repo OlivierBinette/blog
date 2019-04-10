@@ -12,7 +12,16 @@ title: Home
       </a>
     </h1>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
+      {% unless page.categories == empty %}
+      <span style="float:right;" class="post-date">
+        /
+        {% for category in page.categories %}
+          {{ category }} /
+        {% endfor %}
+      </span>
+      {% endunless %}
+    </time>
     {{ post.excerpt }}
     <a href="{{ site.baseurl }}{{ post.url }}"> Read more </a>
     <div style="border-style:solid none none none; border-width:1px; border-color:grey;margin-top:5px"></div>
