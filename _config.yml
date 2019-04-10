@@ -1,19 +1,32 @@
-# Site settings
-title: "TextLog"
-description: "Minimalist Jekyll theme for documentation site"
-baseurl: "/blog" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
-url: "http://olivierbinette.ca"
-author: "John Doe"
+# Permalinks
+permalink:           pretty
 
-# Build settings
-kramdown:
-permalink: pretty
+# Setup
+title:               Poole
+tagline:             The Jekyll Butler
+url:
+paginate:            1
+baseurl:             "/blog"
 
-# Third-party services
-# just leave empty to disable it
-google_analytics:
-disqus_shortname:
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
 
-plugins:
+# About/contact
+author:
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
 
-remote_theme: heiswayi/textlog
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
