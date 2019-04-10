@@ -23,8 +23,12 @@ title: Home
       {% endunless %}
     </time>
     {{ post.excerpt }}
+
+    {% if post.content contains site.excerpt_separator %}
     <a href="{{ site.baseurl }}{{ post.url }}"> Read more </a>
     <div style="border-style:solid none none none; border-width:1px; border-color:#515151;margin-top:5px"></div>
+    {% endif %}
+
   </article>
   {% endfor %}
 </div>
