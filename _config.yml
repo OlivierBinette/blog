@@ -55,5 +55,3 @@ compress_html:
   endings: all
   ignore:
     envs: ['development']
-
-remote_theme: agusmakmun/agusmakmun.github.io
