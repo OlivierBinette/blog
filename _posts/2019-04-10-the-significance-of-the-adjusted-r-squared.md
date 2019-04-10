@@ -129,7 +129,7 @@ To see this, let $\omega$ be, as in the proof of Proposition 1, the projection o
 $$
     F = \frac{\|P_\omega \hat \varepsilon\|^2}{\|\hat \varepsilon - P_\omega \hat \varepsilon \|^2} \frac{n-\tilde p}{k} = \frac{\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2}{1 - \|P_\omega \hat \varepsilon \|^2/\|\hat \varepsilon\|^2} \frac{n-\tilde p}{k}.
 $$
-This is a monotonous invertible transform of $\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2​$ which, under $H_0^{\text{Gauss}}​$, follows a Beta distribution of parameters $k/2​$ and $(n-\tilde p)/2​$. Yet in the framework of Section 2 and under $H_0​$, where now $\omega​$ is random and $\hat \varepsilon​$ fixed, the test statistic $R^2_a(Y, \tilde X)​$ is also a monotonous invertible function of $\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2 \sim \text{Beta}(k/2, (n-\tilde p)/2)​$. This shows that the two unilateral tests are equivalent: the same observations yield the same $p​$-values.
+This is a monotonous invertible transform of $\|P_\omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2​$ which, under $H_0^{\text{Gauss}}​$, follows a Beta distribution of parameters $k/2​$ and $(n-\tilde p)/2​$. Yet in the framework of Section 2 and under $H_0​$, where now $\omega​$ is random and $\hat \varepsilon​$ fixed, the test statistic $R^2_ a(Y, \tilde X)​$ is also a monotonous invertible function of $\|P_ \omega \hat \varepsilon\|^2/\|\hat \varepsilon\|^2 \sim \text{Beta}(k/2, (n-\tilde p)/2)​$. This shows that the two unilateral tests are equivalent: the same observations yield the same $p​$-values.
 
 ## Discussion
 
