@@ -4,12 +4,14 @@ layout: default
 
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  {% for category in page.categories %}
-  <a href="/blog/{{ category | slugize }}/">
-    {{ category }}
-  </a>
-{% endfor %}
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}
+    {% for category in page.categories %}
+    <span style="width:100%; text-align:right;" class="post-date">
+      {{ category }}
+    </span>
+    {% endfor %}
+  </time>
+
 
   {{ content }}
 </article>
