@@ -65,7 +65,7 @@ Let's implement this in R.
 
 First we need a trigonometric density model.
 
-```{r}
+```r
 trig_function <- function(c_real, complex=NULL) {
   # Returns the trigonometric function defined as either:
   # 	f(u) = 1/(2\pi) + \sum_{k=1}^{n} c_real[2*k-1] \sin(k u) + c_real[2*k] \cos(ku),
@@ -98,7 +98,7 @@ trig_function <- function(c_real, complex=NULL) {
 
 We can also generate random trigonometric densities of a fixed degree as follows.
 
-```{r}
+```r
 rtrig <- function(n) {
   u = rnorm(n);
   v = rnorm(n);
@@ -109,7 +109,7 @@ rtrig <- function(n) {
 ```
 
 Usage is like this:
-```{r}
+```r
 u = seq(0, 2*pi, 0.005)
 plot(u, rtrig(10)(u), type="l")
 ```
@@ -118,7 +118,7 @@ plot(u, rtrig(10)(u), type="l")
 
 And finally we can implement the naive rejection sampling algorithm.
 
-```{r}
+```r
 naive_rejection_sampling <- function(f, n) {
   # Returns a random variate following the trigonometric density f of degree n.
   drawn = FALSE
@@ -137,24 +137,24 @@ naive_rejection_sampling <- function(f, n) {
 
 ## Algorithm 2: Negative Mixture Sampling
 
-Another approach to simulate from trigonometric densities relies on the De la Vallée Poussin mixture representation. That is, any $f\in \mathcal{V}_n​$ can be written as
+Another approach to simulate from trigonometric densities relies on the De la Vallée Poussin mixture representation. That is, any $f\in \mathcal{V}_n$ can be written as
 $$
 f = \alpha f_a - (\alpha - 1) f_b,\qquad f_a = \sum_{j=0}^{2n} a_j C_{j_n}, \quad f_b = \sum_{j=0}^{2n} b_j C_{j,n},
 $$
-where $\alpha \geq 1​$, $a_j, b_j \geq 0​$ and $\sum_{j} a_j = \sum_j b_j = 1​$. We can assume that $a_j b_j = 0​$ for every $j​$; i.e. there is no redundancy in the components of $f_a​$ and $f_b​$. The density $f_b​$ accounts for negative weights in the mixture representation of $f​$ using the De la Vallée Poussin densities $(3)​$.
+where $\alpha \geq 1$, $a_j, b_j \geq 0$ and $\sum_{j} a_j = \sum_j b_j = 1$. We can assume that $a_j b_j = 0$ for every $j$; i.e. there is no redundancy in the components of $f_a$ and $f_b$. The density $f_b$ accounts for negative weights in the mixture representation of $f$ using the De la Vallée Poussin densities $(3)$.
 
-We can now sample from $f​$ using samples from $f_a​$ and a simple rejection method.
+We can now sample from $f$ using samples from $f_a$ and a simple rejection method.
 
 **Algorithm 2.**
 
-1. Let $x \sim f_a​$.
-2. Return $x​$ with probability $\frac{f(x)}{\alpha f_a(x)}​$; otherwise return to step 1.
+1. Let $x \sim f_a$.
+2. Return $x$ with probability $\frac{f(x)}{\alpha f_a(x)}$; otherwise return to step 1.
 
 ### Implementation
 
 **De la Vallée Poussin densities and its random variate generator.**
 
-```{r}
+```r
 dvallee <- function(u, j, n) {
   # De la Vallée Poussin density $C_{j,n}(u)$
   
@@ -163,7 +163,7 @@ dvallee <- function(u, j, n) {
 ```
 
 
-```{r}
+```r
 rvallee <- function(j, n, m) {
   # Returns m random variates following the De la Vallée Poussin density $C_{j,n}$.
   
@@ -175,7 +175,7 @@ rvallee <- function(j, n, m) {
 
 Usage:
 
-```{r}
+```r
 s = rvallee(2, 5, 10000)
 u = seq(-pi, pi, 0.05)
 hist(s, prob=TRUE, xlim=c(-pi,pi))
@@ -186,7 +186,7 @@ lines(u, dvallee(u, 2, 5), col=2)
 
 **De la Vallée Poussin mixtures.**
 
-```{r}
+```r
 dValleeMixture <- function(coeffs) {
   # De la Vallée Poussin mixture densities
   
@@ -201,7 +201,7 @@ dValleeMixture <- function(coeffs) {
 }
 ```
 
-```{r}
+```r
 rValleeMixture <- function(coeffs) {
   # Random sample from a De la Vallée Poussin mixture density. The mixture weights are allowed to take negative values.
   
@@ -232,7 +232,7 @@ rValleeMixture <- function(coeffs) {
 
 Example:
 
-```{r}
+```r
 coeffs = c(0.55, -0.15, 0.55, 0, 0, 0,0.05)
 f = dValleeMixture(coeffs)
 u = seq(0, 2*pi, 0.05)
