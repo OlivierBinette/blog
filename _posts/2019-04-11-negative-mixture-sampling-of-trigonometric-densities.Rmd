@@ -34,7 +34,7 @@ C_{j,n}(u) = T_{j,n}\,\left[e^{-i nu}\; \cdots\; e^{-i u}\; 1\; e^{i u}\; \cdots
 $$
 where 
 $$
-T_{j,n} = \left[\exp\left\{{ -i\frac{2\pi j p}{2n+1} u}\right\}{2n \choose n-p} \Big / {2n \choose n}\right]_{p \in \{-n, \dots, n\}}.
+T_{j,n} = \left[\exp\left\{ -i\frac{2\pi j p}{2n+1} u \right\}{2n \choose n-p} \Big / {2n \choose n}\right]_{p \in \{-n, \dots, n\}}.
 $$
 We're using the complex functions $e^{i2\pi k u}​$ instead of $\sin​$ and $\cos​$ simply because they are neater to work with; it doesn't change much otherwise.
 
