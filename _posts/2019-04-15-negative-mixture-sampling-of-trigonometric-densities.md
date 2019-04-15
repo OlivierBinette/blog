@@ -157,7 +157,7 @@ $$
 f = \alpha f_a - (\alpha - 1) f_b,\qquad f_a = \sum_{j=0}^{2n} a_j C_{j_n}, \quad f_b = \sum_{j=0}^{2n} b_j C_{j,n},
 $$
 
-where $\alpha \geq 1$, $a_j, b_j \geq 0$ and $\sum_{j} a_j = \sum_j b_j = 1$. We can assume that $a_j b_j = 0$ for every $j$; i.e. there is no redundancy in the components of $f_a$ and $f_b$. The density $f_b$ accounts for negative weights in the mixture representation of $f$ using the De la Vallée Poussin densities $(3)$.
+where $\alpha \geq 1$, $a_j, b_j \geq 0$ and $\sum_ j a_j = \sum_ j b_ j = 1$. We can assume that $a_j b_j = 0$ for every $j$; i.e. there is no redundancy in the components of $f_a$ and $f_b$. The density $f_b$ accounts for negative weights in the mixture representation of $f$ using the De la Vallée Poussin densities $(3)$.
 
 We can now sample from $f$ using samples from $f_a$ and a simple rejection method.
 
