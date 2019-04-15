@@ -128,7 +128,7 @@ u = seq(0, 2*pi, 0.005)
 plot(u, rtrig(10)(u), type="l")
 ```
 
-![](http://olivierbinette.ca/blog/media/2019-04-11/p1.svg)
+![](http://olivierbinette.ca/blog/media/2019-04-11/p1.svg?style=centerme)
 
 And finally we can implement the naive rejection sampling algorithm.
 
@@ -198,7 +198,7 @@ hist(s, prob=TRUE, xlim=c(-pi,pi))
 lines(u, dvallee(u, 2, 5), col=2)
 ```
 
-![](http://olivierbinette.ca/blog/media/2019-04-11/p2.svg)
+![](http://olivierbinette.ca/blog/media/2019-04-11/p2.svg?style=centerme)
 
 **De la Vallée Poussin mixtures.**
 
@@ -257,7 +257,7 @@ hist(s, prob=T, ylim=c(0, 0.6))
 lines(u, f(u), col=2)
 ```
 
-![](http://olivierbinette.ca/blog/media/2019-04-11/p3.svg)
+![](http://olivierbinette.ca/blog/media/2019-04-11/p3.svg?style=centerme)
 
 #### Other things we could do:
 
