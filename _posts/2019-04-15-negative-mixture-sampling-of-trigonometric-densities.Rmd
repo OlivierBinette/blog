@@ -12,7 +12,9 @@ for some real coefficients $a_k, b_k \in \mathbb{R}$ which are such that $f(u) \
 
 I am discussing three relatively sampling algorithms for such trigonometric densities. The first is an improvement upon the rejection sampling algorithm proposed in Fernández-Durán et al. (2014), the second uses negative mixture sampling and the third relies on the construction of spline enveloppes to the density.
 
+
 <!--more-->
+
 
 ### Parametrizing trigonometric densities
 
