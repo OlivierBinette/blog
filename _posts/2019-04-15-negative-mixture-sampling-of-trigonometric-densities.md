@@ -261,4 +261,4 @@ lines(u, f(u), col=2)
 
 #### Other things we could do:
 
-- The [black box Lipschitz sampling](https://mathstatnotes.wordpress.com/2017/11/05/sampling-lipschitz-continuous-densities/) algorithm can also be used to sample from trigonometric densities. The problem then is to compute good upper boudns on the Lipschitz constant, which should be doable.
+- The [black box Lipschitz sampling](https://mathstatnotes.wordpress.com/2017/11/05/sampling-lipschitz-continuous-densities/) algorithm can also be used to sample from trigonometric densities. This requires to compute good upper bounds on the Lipchitz constant on the density, which should be doable using the De la Vallée Poussin mixture representation.
