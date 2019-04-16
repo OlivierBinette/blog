@@ -10,7 +10,7 @@ $$
 f(u) = a_0 + \sum_{k=1}^n(a_k \sin(k u) + b_k\cos(ku)) \tag{1}
 $$
 
-for some real coefficients $a_k, b_k \in \mathbb{R}$ which are such that $f(u) \geq 0$ and $a_0 = \frac{1}{2\pi} \int f(u)\,du = (2\pi)^{-1}​$. These provide flexible models of circular distributions which are used in studies about the mechanisms of animal orientation and also come up in bio-informatics in relationship to the protein structure prediction problem (the secondary structure of a protein - the way its backbone folds - is determined by a sequence of angles).
+for some real coefficients $a_k, b_k \in \mathbb{R}$ which are such that $f(u) \geq 0$ and $a_0 = \frac{1}{2\pi} \int f(u)\,du = (2\pi)^{-1}​$. These provide flexible models of circular distributions. Circular density modelling comes up in studies about the mechanisms of animal orientation and also come up in bio-informatics in relationship to the protein structure prediction problem (the secondary structure of a protein - the way its backbone folds - is determined by a sequence of angles).
 
 Here I am discussing two simple sampling algorithms for such trigonometric densities. The first is the rejection sampling algorithm proposed in Fernández-Durán et al. (2014) and the second uses negative mixture sampling.
 
