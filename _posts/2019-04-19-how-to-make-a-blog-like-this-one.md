@@ -44,4 +44,4 @@ To enable Latex math support, make sure to include the following code in the htm
 ></script>
 ```
 
-It's already there in my templace, and everything should work fine and dandy. Let me know if you're trying to make a math blog and run into issues. It'd be a pleasure to help!
+It's already there in my template, and everything should work fine and dandy. Let me know if you're trying to make a math blog and run into issues. It'd be a pleasure to help!
