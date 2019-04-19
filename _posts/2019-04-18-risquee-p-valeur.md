@@ -17,4 +17,3 @@ Bon, entre statisticiens, on se comprend. Du moins je l'espère. Le professeur v
 - *La p-valeur est la chance [?] de se tromper en acceptant $H_1​$.*
 
 Quoi faire? Est-ce que je devrais leur enlever des points en corrigeant leurs devoirs, lorsqu'ils répètent que « la p-valeur est le risque d'accepter $H_1​$ à tort » ? C'est le professeur qui va décider au final (on parle de miettes de points ici), mais je ressens quand même l'obligation de pointer l'absurdité du doigt.
-
