@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ô p-valeur, mon coeur!
+title: Risquée p-valeur!
 categories: [Pédagogie]
 ---
 
