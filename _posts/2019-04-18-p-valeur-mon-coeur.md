@@ -8,6 +8,8 @@ On enseigne dans le cours de STT1000 à l'UQÀM qu'une p-valeur c'est le « plus
 
 Qu'est-ce que ça veut dire? Le professeur affirme que l'idée est de contracter la phrase que la « p-valeur est le plus petit seuil sous lequel on *aurait* accepté l'hypothèse alternative ». Bien sûr, pour effectuer cette contraction, il faut laisser tomber le nécessaire usage du temps conditionnel et puis identifier (de façon erronée dans ce contexte) le seuil au risque (de première espèce je suppose)...
 
+<!--more-->
+
 Bon, entre statisticiens, on se comprend. Du moins je l'espère. Le professeur veut seulement éviter ici de se fatiguer la langue. Mais pas tous les étudiants ne savent décortiquer le (non-)sens de cette interprétation de la p-valeur. Ils m'arrivent donc dans leurs devoirs - je suis auxiliaire d'enseignement pour ce cours - avec toutes sortes de variantes complètement fausses. Voici à quoi ça ressemble:
 
 - On a obtenu une p-valeur de $1\%$, et l'étudiant conclue qu'*il y a uniquement un risque de $1\%$ d'erreur à déclarer $H_1​$*.
