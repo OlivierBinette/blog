@@ -13,7 +13,7 @@ It's very easy to write math in this way. No need to struggle with formatting an
 
 <!--more-->
 
-### Setting the site
+### Setting up the site
 
 You will first need a Github account. I would recommend applying for a free "[Student Developer Pack](https://education.github.com/pack)" on Github - if you are eligible - to get a free account with unlimited public and private repositories.
 
