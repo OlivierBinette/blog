@@ -6,7 +6,7 @@ categories: [Pédagogie]
 
 On enseigne dans le cours de STT1000 à l'UQÀM qu'une p-valeur c'est le « plus petit risque à encourir pour rejeter $H_0​$ ».
 
-Qu'est-ce que ça veut dire? Le professeur affirme que l'idée est de contracter la phrase que la « p-valeur observée est le plus petit seuil sous lequel on *aurait* accepté l'hypothèse alternative ». Bien sûr, pour effectuer cette contraction, il faut laisser tomber le nécessaire usage du temps conditionnel et puis identifier (de façon erronée dans ce contexte) le seuil au risque de première espèce...
+Qu'est-ce que ça veut dire? Le professeur affirme que l'idée est de contracter la phrase que la « p-valeur est le plus petit seuil sous lequel on rejete $H_0$ ». Bon, il faudrait même plutôt dire que « la p-valeur est le plus petit seuil sous lequel on *aurait* rejeté $H_0​$ », puisque le test nécéssite la spécification du seuil avant d'avoir observé les données, mais passons… Pour effectuer la contraction, il faut ensuite identifier le seuil au risque de première espèce. Problème: comme ce seuil dépend maintenant des données, il n'a plus rien avoir avec le risque de quoi que ce soit.
 
 <!--more-->
 
