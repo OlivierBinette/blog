@@ -10,7 +10,7 @@ $$
 f(u) = a_0 + \sum_{k=1}^n(a_k \sin(k u) + b_k\cos(ku)) \tag{1}
 $$
 
-for some real coefficients $a_k, b_k \in \mathbb{R}$ which are such that $f(u) \geq 0$ and $a_0 = \frac{1}{2\pi} \int f(u)\,du = (2\pi)^{-1}​$. These provide flexible models of circular distributions. Circular density modelling comes up in studies about the mechanisms of animal orientation and also come up in bio-informatics in relationship to the protein structure prediction problem (the secondary structure of a protein - the way its backbone folds - is determined by a sequence of angles).
+for some real coefficients $a_k, b_k \in \mathbb{R}$ which are such that $f(u) \geq 0$ and $a_0 = \frac{1}{2\pi} \int f(u)\,du = (2\pi)^{-1}$. These provide flexible models of circular distributions. Circular density modelling comes up in studies about the mechanisms of animal orientation and also come up in bio-informatics in relationship to the protein structure prediction problem (the secondary structure of a protein - the way its backbone folds - is determined by a sequence of angles).
 
 Here I am discussing two simple sampling algorithms for such trigonometric densities. The first is the rejection sampling algorithm proposed in Fernández-Durán et al. (2014) and the second uses negative mixture sampling.
 
@@ -20,7 +20,7 @@ Here I am discussing two simple sampling algorithms for such trigonometric densi
 
 ### Parametrizing trigonometric densities
 
-By Féjer's Theorem, the conditions on the coefficients $a_k​$ and $b_k​$ can be stated as follows: there exists a vector of complex coefficients $c = (c_0, c_1, \dots, c_n)​$ with $\|c\|^2 = (2\pi)^{-1}​$ and satisfying
+By Féjer's Theorem, the conditions on the coefficients $a_k$ and $b_k$ can be stated as follows: there exists a vector of complex coefficients $c = (c_0, c_1, \dots, c_n)$ with $\|c\|^2 = (2\pi)^{-1}$ and satisfying
 
 $$
 f(u) = \left\| \sum_{k=0}^n c_k e^{ik u} \right\|^2. \tag{2}
@@ -36,7 +36,7 @@ $$
 C_{j,n}(u) = \frac{2^n}{2\pi {2n \choose n}} \left(1+\cos\left(u - \tfrac{2\pi j}{2n+1}\right)\right)^n,\quad j\in \{0,1,\dots, 2n\}. \tag{3}
 $$
 
-These can be used to express trigonometric densities as mixtures of probability density functions (instead of the functions $\cos​$ and $\sin​$, and the change of basis formula follows from the expression
+These can be used to express trigonometric densities as mixtures of probability density functions (instead of the functions $\cos$ and $\sin$, and the change of basis formula follows from the expression
 
 $$
 C_{j,n}(u) = T_{j,n}\,\left[e^{-i nu}\; \cdots\; e^{-i u}\; 1\; e^{i u}\; \cdots\; e^{i nu}\right]^{T}
@@ -48,22 +48,22 @@ $$
 T_{j,n} = \left[\exp\left\{ -i\frac{2\pi j p}{2n+1} u \right\}{2n \choose n-p} \Big / {2n \choose n}\right]_{p \in \{-n, \dots, n\}}.
 $$
 
-We're using the complex functions $e^{i2\pi k u}​$ instead of $\sin​$ and $\cos​$ simply because they are neater to work with; it doesn't change much otherwise.
+We're using the complex functions $e^{i2\pi k u}$ instead of $\sin$ and $\cos$ simply because they are neater to work with; it doesn't change much otherwise.
 
-We also show in our paper that if $V \sim \text{Ber}(1 / 2)​$ and $W \sim \text{Beta}(1 / 2, 1 / 2+n)​$, then
+We also show in our paper that if $V \sim \text{Ber}(1 / 2)$ and $W \sim \text{Beta}(1 / 2, 1 / 2+n)$, then
 
 $$
 (1-2V)\arccos(1-2W) +\tfrac{2\pi j}{2n+1} \sim C_{j,n}.
 $$
 
-This provide an easily formula to sample from the basis functions $C_{j,n}​$ and their mixtures.
+This provide an easily formula to sample from the basis functions $C_{j,n}$ and their mixtures.
 
 ## Algorithm 1: Naive rejection sampling
 
 Given an uniform upper bound $C$ on the family $\mathcal{V}_n$ of trigonometric densities, we can sample from a given $f\in \mathcal{V}_n$ using simple rejection sampling as follows:
 
-1. Let $(x, y)​$ be uniformly distributed over $[0, 2\pi) \times [0, C]​$;
-2. If $y \leq f(x)​$, then return $x​$; otherwise return to step 1.
+1. Let $(x, y)$ be uniformly distributed over $[0, 2\pi) \times [0, C]$;
+2. If $y \leq f(x)$, then return $x$; otherwise return to step 1.
 
 Now the problem is to figure out a good upper bound $C$. The most basic idea is to do as in Fernandez-Duran et al. (2014) and to apply the Cauchy-Schwarz inequality
 
@@ -71,7 +71,7 @@ $$
 f(u) = \left\| \sum_{k=0}^n c_k e^{i k u} \right\|^2 \leq \|c\|^2 \sum_{k=0}^n|e^{iku}| = \frac{n+1}{2\pi}.
 $$
 
-Can we find a better bound? I think that $C = \sqrt{n}/\pi​$ would work, but I have no clue how to prove it….
+Can we find a better bound? I think that $C = \sqrt{n}/\pi$ would work, but I have no clue how to prove it….
 
 Let's implement this in R.
 

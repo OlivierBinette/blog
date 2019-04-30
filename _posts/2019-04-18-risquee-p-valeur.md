@@ -6,7 +6,7 @@ categories: [Pédagogie]
 
 On enseigne dans le cours de Stat 101 à l'UQÀM qu'une p-valeur c'est le « plus petit risque à encourir pour rejeter $H_0$ ».
 
-Qu'est-ce que ça veut dire? Le professeur affirme que l'idée est de contracter la phrase que la « p-valeur est le plus petit seuil sous lequel on rejete $H_0$ ». Il faudrait plutôt dire que « la p-valeur est le plus petit seuil sous lequel on *aurait* rejeté $H_0$ », puisque le test nécéssite la spécification du seuil avant d'avoir observé les données, mais passons… Pour effectuer la contraction, il faut ensuite identifier le seuil au risque de première espèce. Problème: comme ce seuil dépend maintenant des données, il n'a plus rien avoir avec le risque de quoi que ce soit.
+Qu'est-ce que ça veut dire? Le professeur affirme que l'idée est de contracter la phrase que la « p-valeur est le plus petit seuil sous lequel on rejete $H_0$ ». Il faudrait plutôt dire que « la p-valeur est le plus petit seuil sous lequel on *aurait* rejeté $H_0​$ », puisque le test nécéssite la spécification du seuil avant d'avoir observé les données, mais passons… Pour effectuer la contraction, il faut ensuite identifier le seuil au risque de première espèce. Problème: comme ce seuil dépend maintenant des données, il n'a plus rien avoir avec le risque de quoi que ce soit.
 
 <!--more-->
 
@@ -22,4 +22,3 @@ Quoi faire? Est-ce que je devrais leur enlever des points en corrigeant leurs de
 
 - Greenland et al. (2016) [Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.](https://www.ncbi.nlm.nih.gov/pubmed/27209009) *Eur. J. Epidemiol. (31)* p. 337-350
 - The American Statistical Association. (2016) [ASA Statement on Statistical Significance an P-Values.](https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108)
-
