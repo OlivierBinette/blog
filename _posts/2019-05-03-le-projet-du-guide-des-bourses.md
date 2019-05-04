@@ -52,7 +52,7 @@ In short: (1) map out your environment; (2) figure out what you want; and (3) ge
 
 Hopefully the Guide des bourses will help some students work through these steps.
 
-I also want to add that it's ok to have ambitious goals and it's ok to change them whenever you want and for whatever reason. What is not ok is to stall or to let others tell you what your goals should be. There's so much important and beautiful things to be done in this world. It's a shame we so easily shy away from deciding on what deserves our time.
+I also want to add that it's ok to have ambitious goals and it's ok to change them whenever you want and for whatever reason. What is not ok is to stall or to let others tell you what your goals should be. There's so much important and beautiful things to be done in this world. It's a shame we so easily shy away from deciding what deserves our time.
 
 ---
 
