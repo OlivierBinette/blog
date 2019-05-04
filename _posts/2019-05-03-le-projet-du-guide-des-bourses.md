@@ -21,7 +21,7 @@ Unfortunately, even though I tried my best, I don't think I did nearly a good en
 
 (Even though I was bad at it, I was still one of the very few who actually talk about these things.)
 
-And if it's still hard for me to get a clear picture and thorough information on this subject, even after going through a bachelor and a master at UQAM, imagine what it's like for first or second year students. I also had no clue when I was beginning and knowing about some of these things and professional development advice would have greatly helped me.
+And if it's still hard for me to get a clear picture and thorough information on this subject, even after going through a bachelor and a master at UQAM, imagine what it's like for first or second year students! I also had no clue when I was beginning. Getting some professional development advice early on would have greatly helped me.
 
 So that's the story behind the [**Guide des bourses**](https://github.com/OlivierBinette/Guide-des-bourses-UQAM) (Guide to Scholarship and Awards). Now I want to put together all of the ressources that would have helped me when going through my studies at UQAM, so that all students have easy access to this information.
 
