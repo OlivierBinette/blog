@@ -19,7 +19,7 @@ Unfortunately, even though I tried my best, I don't think I did nearly a good en
 - I have a very limited knowledge of what's going on in the math undergrad world.
 - I only know about the FRQNT and CRSNG scholarships to which I applied (because somebody once told me about them).
 
-(Even though I was bad at it, I was still the only one to actually talk about these things.)
+(Even though I was bad at it, I was still one of the very few who actually talk about these things.)
 
 And if it's still hard for me to get a clear picture and thorough information on this subject, even after going through a bachelor and a master at UQAM, imagine what it's like for first or second year students. I also had no clue when I was beginning and knowing about some of these things and professional development advice would have greatly helped me.
 
