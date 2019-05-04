@@ -46,13 +46,13 @@ I've worked very hard to get into good schools for my PhD, and I was in particul
 
 1. Figure out what ressources are avaible to support you in your immediate environment. You need access to well-being ressources (mental and physical health), professional and academic counselling, as well as more personal mentorship (can you get in touch with professors or professionals in order to get advice?). Map out your current environment before anything else.
 2. Figure out what you want. What are you really passionate about? What kind of work makes you forget that you're actually working? What opportunities (maybe scholarships, internships or projects) are available to you?
-3. Once you have knowledge of your environment and where you're headed, then get moving! Get work done, improve your CV and start to apply on the jobs / scholarhips / internships / whatever that are in line with your goals. Your goals can change - that's perfectly fine. But you still need to have a clear direction if you want to move forward. If you're applying for scholarships, then apply **everywhere** you qualify. Don't be afraid to ask a prof to submit their recommandation letter at 10+ places: it takes them 30 seconds to copy-paste it in web forms. (I know it's scary. I was scared, I did not ask for nearly enough letters and I regret it now. Ask for those rec. letters!)
+3. Once you have knowledge of your environment and of where you're headed, then get moving! Get work done, improve your CV and start to apply on the jobs / scholarhips / internships / whatever that are in line with your goals. Your goals can change - that's perfectly fine. But you still need to have a clear direction if you want to move forward. If you're applying for scholarships, then apply **everywhere** you qualify. Don't be afraid to ask a prof to submit their recommandation letter at 10+ places: it takes them 30 seconds to copy-paste it in web forms. (I know it's scary. I was scared, I did not ask for nearly enough letters and I regret it now. Ask for those rec. letters!)
 
-In short: (1) map out your environment; (2) figure out what you want; and (3) get going! Hopefully the Guide des bourses will help some students work through these steps.
+In short: (1) map out your environment; (2) figure out what you want; and (3) get going! 
 
-I also want to add that it's ok to have ambitious goals and it's ok to change them whenever you want and for whatever reason. What is not ok is to stall or to let others tell you what your goals should be.
+Hopefully the Guide des bourses will help some students work through these steps.
 
-There's so much important and beautiful things to be done in this world. It's a shame we so easily shy away from deciding on what is important and deserves our time.
+I also want to add that it's ok to have ambitious goals and it's ok to change them whenever you want and for whatever reason. What is not ok is to stall or to let others tell you what your goals should be. There's so much important and beautiful things to be done in this world. It's a shame we so easily shy away from deciding on what deserves our time.
 
 ---
 
