@@ -5,7 +5,6 @@ categories: [Simulation, Circular Stats]
 ---
 
 Trigonometric densities (or non-negative trigonometric sums) are probability density functions of circular random variables (i.e. $2\pi$-periodic densities) which take the form
-
 $$
 f(u) = a_0 + \sum_{k=1}^n(a_k \sin(k u) + b_k\cos(ku)) \tag{1}
 $$

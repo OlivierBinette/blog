@@ -4,7 +4,7 @@ title: Notes about the Separation $alpha$-entropy
 categories: [Research, Bayesian Theory]
 ---
 
-I introduced a a few weeks ago [on my retired blog](https://mathstatnotes.wordpress.com/) the notion of the *separation $\alpha$-entropy* of a set $A$ relatively to a fixed point $f_0$ and a prior distribution $\Pi$ over $\mathbb{F} \supset A$. This allowed us to formulate probable finite sample posterior concentration bounds taking the following form: for any $\delta > 0$ and $\kappa > 1$,
+I introduced a a few weeks ago [on my retired blog](https://mathstatnotes.wordpress.com/) the notion of the *separation $\alpha$-entropy* of a set $A$ relatively to a fixed point $f_0$ and a prior distribution $\Pi$ over $\mathbb{F} \supset A$. This allowed us to formulate a probable finite sample posterior concentration bound taking the following form: for any $\delta > 0$ and $\kappa > 1$,
 $$
 \mathbb{P}\left(\log \Pi(A \mid \{X_i\}_{i=1}^n) \leq \frac{1-\alpha}{\alpha}\mathcal{S}^\star_\alpha(A, \delta) -\log \Pi(B(\delta, f^\star;f_0)) - n \kappa \delta \right) \geq 1-\frac{8}{\alpha^2\delta n},
 $$
