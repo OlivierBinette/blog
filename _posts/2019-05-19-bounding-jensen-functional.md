@@ -43,7 +43,7 @@ $$
 D(\mu|\nu) \leq \sup_A|\mu(A) - \nu(A)| \left(\frac{\log(a)}{a-1} +\frac{\log(b)}{1-b}\right).
 $$
 
-Applying again the Jensen functional bound to $\sup_A | \mu(A)-\nu(A) | = \frac{1}{2}\int\left | \frac{d\mu}{d\nu} - 1\right |  d\nu$, we obtain 
+Applying again the Jensen functional bound to $\sup_A \lvert \mu(A)-\nu(A) \rvert = \frac{1}{2}\int\left \lvert \frac{d\mu}{d\nu} - 1\right \rvert  d\nu$, we obtain 
 
 $$
 \sup_A|\mu(A) - \nu(A)| \leq \frac{(M-1)(1-m)}{M-m}
