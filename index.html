@@ -14,7 +14,7 @@ title: Home
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
       {% unless post.categories == empty %}
-      <span style="float:right;" class="post-date">
+      <span style="float:right;margin-top:0px;" class="post-date">
         /
         {% for category in post.categories %}
           {{ category }} /
