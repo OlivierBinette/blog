@@ -42,21 +42,27 @@ is the expected risk of $\hat \theta$ with respect to the prior $\pi$, then we h
 $$
 B_\pi(\hat \theta) \geq B_\pi(\hat \theta_\pi)
 $$
-for any estimator $\hat \theta$. That is, the posterior mean estimate minimises the expected risk.
+for any estimator $\hat \theta$. That is, the posterior mean estimate minimizes the expected risk.
 
-A few remarks before the (simple) proof:
+A few remarks before I decide to skip the proof:
 
 1. The expected risk has stability properties. If $\tilde \pi$ and $\pi$ are two priors that are absolutely continuous with respect to each other, and if $\|\log \frac{d\tilde \pi}{d\pi}\|_\infty \leq C$, then
    $$
-   e^{-C}B_\pi(\theta_\pi) \leq B_{\tilde \pi}(\hat \theta_\pi) \leq e^C B_{\pi}(\hat \theta_\pi).
+   e^{-C}B_\pi(\hat\theta) \leq B_{\tilde \pi}(\hat \theta) \leq e^C B_{\pi}(\hat \theta).
    $$
-   If the risk $R(\hat \theta_\pi; \theta_0)$ is uniformly bounded by some constant $M$ over $\theta_0\in \Theta$, then
+   If the risk $R(\hat \theta; \theta_0)$ is uniformly bounded by some constant $M$ over $\theta_0\in \Theta$, then
    $$
-   B_{\tilde \pi}(\hat \theta_\pi) \leq \sqrt{M B_{\pi}(\hat \theta_\pi)} \left\|d\tilde\pi/d\pi\right\|_{L^2(\pi)}.
+   B_{\tilde \pi}(\hat \theta) \leq \sqrt{M B_{\pi}(\hat \theta)} \left\|d\tilde\pi/d\pi\right\|_{L^2(\pi)}.
    $$
-   
+   This shows how small chances in the prior does not result in a dramatic change in the expected loss of an estimator, as long as the priors have "compatible tails" (i.e. a manageable likelihood ratio).
 
-## 2. Randomised estimation and minimal divergence
+2. It is sometimes advocated to choose the prior $\pi$ so that the risk $R(\hat \theta_\pi; \theta_0)$ is constant over $\theta_0$: the resulting estimator $\hat \theta_\pi$ is then agnostic, from a risk point of view, to $\theta_0$. This may result in a sample-size dependent prior (which is not in the Bayesian spirit), but the fun thing is that it makes the expected risk *maximal* and the Bayes estimator $\hat \theta_\pi$ minimax: $\hat \theta_\pi \in \arg\min _ {\hat\theta} \sup _ {\theta_0}R(\hat \theta;\theta_0)$. Indeed, in that case we have for any estimator $\hat \theta$ that $\sup_{\theta_0} R(\hat \theta; \theta_0) \geq B_\pi(\theta_\pi) = \sup_{\theta_0}R(\hat \theta_\pi;\theta_0)$, from which it follows that $\hat \theta_\pi$ is minimax.
+
+### Classification with a 0-1 loss
+
+
+
+## 2. Randomized estimation and minimal divergence
 
 
 
