@@ -15,7 +15,8 @@ The well-known Jensen inequality states that $\mathcal{J}(\varphi, X) \geq 0$. F
 If $X$ is bounded, then a converse to the Jensen inquality can be easily obtained as follows: let $m$ and $M$ be the infimum and maximum of $X$, and write $X = \alpha m + (1-\alpha)M$ for some random variable $\alpha$ taking values in $[0,1]$. Then $\mathbb{E}[\alpha] = (M - \mu)/(M-m)$ and consequently with $\mu:= \mathbb{E}[X]$,
 
 $$
-\mathcal{J}(\varphi, X) \leq \mathbb{E}[\alpha\phi(m) + (1-\alpha)\phi(M)] - \varphi(\mu) = \frac{(M-\mu)\varphi(m) + (\mu-m)\varphi(M)}{M-m}- \varphi(\mu).\tag{2}
+\mathcal{J}(\varphi, X) \leq \mathbb{E}[\alpha\phi(m) + (1-\alpha)\phi(M)] - \varphi(\mu)\\
+\qquad= \frac{(M-\mu)\varphi(m) + (\mu-m)\varphi(M)}{M-m}- \varphi(\mu).\tag{2}
 $$
 
 When $\mu$ is unknown in practice, then maximizing the above over all possibilities yields
