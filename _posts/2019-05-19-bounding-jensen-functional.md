@@ -4,7 +4,7 @@ title: Global bounds on the Jensen functional
 categories: [Proof techniques, Misc]
 ---
 
-Given convex  function $\varphi : \mathbb{R} \rightarrow \mathbb{R}$ and $X$ a random variable on $\mathbb{R}$ (both integrable), the Jensen functional of $\varphi$ and $X$ is defined as
+Given a convex  function $\varphi : \mathbb{R} \rightarrow \mathbb{R}$ and $X$ a random variable on $\mathbb{R}$, the Jensen functional of $\varphi$ and $X$ is defined as
 
 $$
 \mathcal{J}(\varphi, X) = \mathbb{E}[\varphi(X)] -\varphi(\mathbb{E}[X]).\tag{1}
@@ -38,7 +38,6 @@ $$
 which is a well-known elementary result. 
 
 **$f$-divergence bounds.** In [(Binette, 2019)](https://arxiv.org/abs/1805.05135), I show how we can use similar ideas to get best-possible upper bounds on $f$-divergences in terms of the total variation distance and likelihood ratio extremums. In particular, with $D(\mu\|\nu) = \int \log\left(\frac{d\mu}{d\nu}\right) d\mu$ the Kullback-Leibler divergence between the probability measures $\mu$ and $\nu$, we find that if $a = \inf \frac{d\nu}{d\mu}$ and $b = \sup \frac{d\nu}{d\mu}$, then 
-
 $$
 D(\mu|\nu) \leq \sup_A|\mu(A) - \nu(A)| \left(\frac{\log(a)}{a-1} +\frac{\log(b)}{1-b}\right).
 $$
