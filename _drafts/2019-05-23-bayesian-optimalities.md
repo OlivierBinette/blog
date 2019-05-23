@@ -42,6 +42,12 @@ B_\pi(\hat \theta) \geq B_\pi(\hat \theta_\pi)
 $$
 for any estimator $\hat \theta$. That is, the posterior mean estimate minimizes the expected risk.
 
+The proof follows from the fact that
+$$
+\| \theta_0 - \hat \theta(X) \|^2 \geq \|\theta_0 - \hat \theta_\pi(X) \|^2 + \langle \theta_0 - \hat \theta_\pi(X), \hat \theta_\pi(X) - \hat \theta(X)\rangle
+$$
+and that 
+
 A few remarks before I decide to skip the proof:
 
 1. The expected risk has stability properties. If $\tilde \pi$ and $\pi$ are two priors that are absolutely continuous with respect to each other, and if $\|\log \frac{d\tilde \pi}{d\pi}\|_\infty \leq C$, then
@@ -59,6 +65,8 @@ A few remarks before I decide to skip the proof:
 ### Classification with a 0-1 loss
 
 
+
+### General minimal risk estimation
 
 ## 2. Randomized estimation and minimal divergence
 
