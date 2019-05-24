@@ -19,7 +19,7 @@ $$
 \qquad= \frac{(M-\mu)\varphi(m) + (\mu-m)\varphi(M)}{M-m}- \varphi(\mu).\tag{2}
 $$
 
-When $\mu$ is unknown in practice, then maximizing the above over all possibilities yields
+When $\mu$ is unknown in practice, then maximizing the above over all possibilities is the bound
 
 $$
 \mathcal{J}(\varphi, X) \leq \max_{p \in [0,1]} \left\{p\varphi(m) + (1-p)\varphi(M) - \varphi(pm + (1-p) M)\right\}\tag{3}
@@ -37,7 +37,7 @@ $$
 
 which is a well-known elementary result. 
 
-**$f$-divergence bounds.** In [(Binette, 2019)](https://arxiv.org/abs/1805.05135), I show how we can use similar ideas to get best-possible upper bounds on $f$-divergences in terms of the total variation distance and likelihood ratio extremums. In particular, with $D(\mu\|\nu) = \int \log\left(\frac{d\mu}{d\nu}\right) d\mu$ the Kullback-Leibler divergence between the probability measures $\mu$ and $\nu$, we find that if $a = \inf \frac{d\nu}{d\mu}$ and $b = \sup \frac{d\nu}{d\mu}$, then 
+**$f$-divergence bounds.** In [(Binette, 2019)](https://arxiv.org/abs/1805.05135), I show how we can use similar ideas to get best-possible *reverse Pinsker inequalities*: upper bounds on $f$-divergences in terms of the total variation distance and likelihood ratio extremums. In particular, with $D(\mu\|\nu) = \int \log\left(\frac{d\mu}{d\nu}\right) d\mu$ the Kullback-Leibler divergence between the probability measures $\mu$ and $\nu$, we find that if $a = \inf \frac{d\nu}{d\mu}$ and $b = \sup \frac{d\nu}{d\mu}$, then 
 $$
 D(\mu|\nu) \leq \sup_A|\mu(A) - \nu(A)| \left(\frac{\log(a)}{a-1} +\frac{\log(b)}{1-b}\right).
 $$
