@@ -75,7 +75,7 @@ we obtain the result.
 A few remarks:
 
 1. The expected risk has stability properties. If $\tilde \pi$ and $\pi$ are two priors that are absolutely continuous with respect to each other, and if $\|\log \frac{d\tilde \pi}{d\pi}\| _ \infty \leq C$, then
-   
+  
 $$
    e^{-C}B _ \pi(\hat\theta) \leq B _ {\tilde \pi}(\hat \theta) \leq e^C B _ {\pi}(\hat \theta).
 $$
@@ -94,15 +94,15 @@ This shows how small chances in the prior does not result in a dramatic change i
 
 $$
    R _ \pi(\hat \theta\mid X) = \mathbb{E} _ {\theta _ 0 \sim \pi(\cdot \mid X)}\left[(\hat \theta(X) - \theta _ 0)^2\right].
-   $$
+$$
 
-It is clear from the previous computations that the posterior mean estimate minimizes the posterior risk, and hence the two approaches are equivalent. It turns out that, whatever the loss function we consider (under some regularity condition ensuring that stuff is finite and minimizers exist), minimizing the posterior risk is equivalent to minimizing the Bayes risk. In other words, we have that for any loss function $\ell \geq 0$ (again under some regularity conditions ensuring finiteness and existence of stuff), we have
+<li style="list-style-type: none;"> It is clear from the previous computations that the posterior mean estimate minimizes the posterior risk, and hence the two approaches are equivalent. It turns out that, whatever the loss function we consider (under some regularity condition ensuring that stuff is finite and minimizers exist), minimizing the posterior risk is equivalent to minimizing the Bayes risk. In other words, we have that for any loss function (again under some regularity conditions ensuring finiteness and existence of stuff), we have</li>
 
 $$
    \arg\min _ {\hat \theta}\mathbb{E} _ {X \sim m}\left[\mathbb{E} _ {\theta _ 0 \sim \pi(\cdot \mid X)}[\ell(\hat \theta(X), \theta _ 0)]\right] = \arg\min _ {\hat\theta}\mathbb{E} _ {\theta _ 0 \sim \pi(\cdot \mid X)}[\ell(\hat \theta(X), \theta _ 0)].
 $$
 
-This is roughly self-evident if we think about it. An interesting consequence is that **any estimator minimizing a Bayes risk is a function of the posterior distribution**.2
+<li style="list-style-type: none;">This is roughly self-evident if we think about it. An interesting consequence is that **any estimator minimizing a Bayes risk is a function of the posterior distribution**.</li>
 
 ## 2. Randomized estimation and information risk minimization
 
