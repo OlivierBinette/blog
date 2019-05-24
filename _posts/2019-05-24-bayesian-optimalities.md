@@ -6,11 +6,13 @@ categories: [Bayesian Theory]
 
 I'm sometimes asked in conferences and meetings around Montreal: *why Bayes?*
 
+<!--more-->
+
 This always strikes me. I do sometimes identify with "bayesianism", because I want to do research related to Bayesian statistics, but I don't feel that I'm a Bayesian in the sense that I adhere to one particular school of thought. First and foremost, I am a mathematician and a statistician. I want to understand the world through simulation and modelling, with the certainty provided by mathematical lenses, and I want to study and develop the statistical tools that we use to understand the world when certainty is not at reach. That's my scientific identity.
 
 Yet I'm also driven to answer: *what else?* What else than probabilities to model uncertainty and randomness? What else than probabilistic conditioning to account for new information? (Ok, I'm exaggerating a bit here. There are tons of other fun "else" to answer that question, but Bayes certainly stands out.) I'm drawn to Bayesian stats because, more often than not, it's about providing meaningful answers to the questions that we really care about. I want, when possible, posterior probabilities of hypotheses; not 0-1 decisions and wishful thinking.
 
-That's for the "let's infer stuff" part. In a prediction or point estimation context, I can also try to explain how Bayesian procedures are well suited to hierarchical modelling and convenient computational algorithms, how they can be used to incorporate prior information, have nice properties and follow conceptually simple principles which are well suited to mathematical analysis. They may or may not help solving a particular problem and that's perfectly fine, but they are still a subject of study worthwhile of specialisation.
+That's for the "let's infer stuff" part. In a prediction or point estimation context, I can also try to explain how Bayesian procedures are well suited to hierarchical modelling and convenient computational algorithms, how they can be used to incorporate prior information, have nice properties and follow conceptually simple principles which are well suited to mathematical analysis. They may or may not help solving a particular problem and that's perfectly fine, but they are still a subject of study worthwhile of specialisation. (Yes, I currently often have to *defend* my choice of studying Bayesian stats. I'm eager to begin my PhD.)
 
 This post is about some of these nice properties of posterior distributions that I like to talk about. I'll leave the non-nice things for another time.
 

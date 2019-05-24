@@ -19,8 +19,9 @@ $$
 \qquad= \frac{(M-\mu)\varphi(m) + (\mu-m)\varphi(M)}{M-m}- \varphi(\mu).\tag{2}
 $$
 
-When $\mu$ is unknown in practice, then maximizing the above over all possibilities is the bound
+<!--more-->
 
+When $\mu$ is unknown in practice, then maximizing the above over all possibilities is the bound
 $$
 \mathcal{J}(\varphi, X) \leq \max_{p \in [0,1]} \left\{p\varphi(m) + (1-p)\varphi(M) - \varphi(pm + (1-p) M)\right\}\tag{3}
 $$
