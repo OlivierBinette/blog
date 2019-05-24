@@ -21,64 +21,88 @@ This first section is not directly about properties of the posterior distributio
 ### Squared error loss
 
 Suppose $\pi$ is a prior on an **euclidean** parameter space $\Theta \subset \mathbb{R}^d$ with norm $\|\theta\|^2 = \theta^T \theta$ defined through the dot product. Given a likelihood $p_\theta(X)$ for data $X$, the posterior distribution is defined as
+
 $$
 \pi(A \mid X) \propto \int_A p_\theta(X) \pi(d\theta)
 $$
+
 and the mean of the posterior distribution is
+
 $$
 \hat \theta_{\pi} = \int \theta \,\pi(d\theta \mid X) = \mathbb{E}_{\theta \sim \pi}[\theta \mid X].
 $$
+
 If we define the *risk* of an estimator $\hat \theta$ for the estimation of a parameter $\theta_0$ as
+
 $$
 R(\hat \theta; \theta_0) = \mathbb{E}_{X \sim p_\theta}[\|\theta_0 - \hat \theta(X)\|^2],
 $$
+
 and if
+
 $$
 B_\pi(\hat \theta) = \mathbb{E}_{\theta_0 \sim \pi}[R(\hat \theta; \theta_0)]
 $$
+
 is the expected risk of $\hat \theta$ with respect to the prior $\pi$ (also called the **Bayes risk**), then we have that the posterior mean estimate $\hat \theta_{\pi}$ satisfies
+
 $$
 B_\pi(\hat \theta) \geq B_\pi(\hat \theta_\pi)
 $$
+
 for any estimator $\hat \theta$. That is, the posterior mean estimate minimizes the expected risk.
 
 The proof follows from the fact that
+
 $$
 \| \theta_0 - \hat \theta(X) \|^2 \geq \|\theta_0 - \hat \theta_\pi(X) \|^2 + \langle \theta_0 - \hat \theta_\pi(X), \hat \theta_\pi(X) - \hat \theta(X)\rangle.
 $$
+
 Writing the expected risk as an expected posterior loss, i.e. using the fact that
+
 $$
 \mathbb{E}_{\theta_0 \sim \pi}\left[\mathbb{E}_{X \sim p_{\theta_0}}[\,\cdot\,]\right] = \mathbb{E}_{X \sim m}\left[\mathbb{E}_{\theta_0 \sim \pi(\cdot \mid X)}[\,\cdot\,]\right]
 $$
+
 where $m$ has density $m(x) = \int p_\theta(x) \pi(\theta)\,d\theta$, and since
+
 $$
 \mathbb{E}_{\theta_0 \sim \pi(\cdot \mid X)}\left[\langle \theta_0 - \hat \theta_\pi(X), \hat \theta_\pi(X) - \hat \theta(X)\rangle\right] = 0,
 $$
+
 we obtain the result.
 
 A few remarks:
 
 1. The expected risk has stability properties. If $\tilde \pi$ and $\pi$ are two priors that are absolutely continuous with respect to each other, and if $\|\log \frac{d\tilde \pi}{d\pi}\|_\infty \leq C$, then
-   $$
+   
+$$
    e^{-C}B_\pi(\hat\theta) \leq B_{\tilde \pi}(\hat \theta) \leq e^C B_{\pi}(\hat \theta).
-   $$
-   If the risk $R(\hat \theta; \theta_0)$ is uniformly bounded by some constant $M$ over $\theta_0\in \Theta$, then
-   $$
-   B_{\tilde \pi}(\hat \theta) \leq \sqrt{M B_{\pi}(\hat \theta)} \left\|d\tilde\pi/d\pi\right\|_{L^2(\pi)}.
-   $$
-   This shows how small chances in the prior does not result in a dramatic change in the expected loss of an estimator, as long as the priors have "compatible tails" (i.e. a manageable likelihood ratio).
+$$
 
-2. It is sometimes advocated to choose the prior $\pi$ so that the risk $R(\hat \theta_\pi; \theta_0)$ is constant over $\theta_0$: the resulting estimator $\hat \theta_\pi$ is then agnostic, from a risk point of view, to $\theta_0$. This may result in a sample-size dependent prior (which is arguably not in the Bayesian spirit), but the fun thing is that it makes the expected risk *maximal* and the Bayes estimator $\hat \theta_\pi$ minimax: $\hat \theta_\pi \in \arg\min _ {\hat\theta} \sup _ {\theta_0}R(\hat \theta;\theta_0)$. Indeed, in that case we have for any estimator $\hat \theta$ that $\sup_{\theta_0} R(\hat \theta; \theta_0) \geq B_\pi(\hat \theta) \geq B_\pi(\theta_\pi) = \sup_{\theta_0}R(\hat \theta_\pi;\theta_0)$, from which it follows that $\hat \theta_\pi$ is minimax.
+If the risk $R(\hat \theta; \theta_0)$ is uniformly bounded by some constant $M$ over $\theta_0\in \Theta$, then
+
+$$
+   B_{\tilde \pi}(\hat \theta) \leq \sqrt{M B_{\pi}(\hat \theta)} \left\|d\tilde\pi/d\pi\right\|_{L^2(\pi)}.
+$$
+
+This shows how small chances in the prior does not result in a dramatic change in the expected loss of an estimator, as long as the priors have "compatible tails" (i.e. a manageable likelihood ratio).
+
+2. It is sometimes advocated to choose the prior $\pi$ so that the risk $R(\hat \theta_\pi; \theta_0)$ is constant over $\theta_0$: the resulting estimator $\hat \theta_\pi$ is then agnostic, from a risk point of view, to $\theta_0$. This may result in a sample-size dependent prior (which is arguably not in the Bayesian spirit), but the fun thing is that it makes the expected risk *maximal* and the Bayes estimator $\hat \theta_\pi$ minimax: $\hat \theta _ \pi \in \arg\min _  {\hat\theta} \sup _  {\theta _ 0}R(\hat \theta;\theta _ 0)$. Indeed, in that case we have for any estimator $\hat \theta$ that $\sup  _  {\theta _ 0} R(\hat \theta; \theta _ 0) \geq B _ \pi(\hat \theta) \geq B _  \pi(\theta _ \pi) = \sup _  {\theta _  0}R(\hat \theta _ \pi;\theta _ 0)$, from which it follows that $\hat \theta _ \pi$ is minimax.
 
 3. The idea of minimizing expected risk is not quite Bayesian, since it required us to first average over all data possibilities when computing the risk. One of the main advantage of the Bayesian framework is that it allows us to *condition* over the observed data, rather than pre-emptively considering all possibilities, and we can try to make use of that. Define the **posterior expected loss** (or **posterior risk**) or an estimator $\hat \theta$, conditionally on $X$, as
-   $$
+
+$$
    R_\pi(\hat \theta\mid X) = \mathbb{E}_{\theta_0 \sim \pi(\cdot \mid X)}\left[(\hat \theta(X) - \theta_0)^2\right].
    $$
-   It is clear from the previous computations that the posterior mean estimate minimizes the posterior risk, and hence the two approaches are equivalent. It turns out that, whatever the loss function we consider (under some regularity condition ensuring that stuff is finite and minimizers exist), minimizing the posterior risk is equivalent to minimizing the Bayes risk. In other words, we have that for any loss function $\ell \geq 0$ (again under some regularity conditions ensuring finiteness and existence of stuff), we have
-   $$
+
+It is clear from the previous computations that the posterior mean estimate minimizes the posterior risk, and hence the two approaches are equivalent. It turns out that, whatever the loss function we consider (under some regularity condition ensuring that stuff is finite and minimizers exist), minimizing the posterior risk is equivalent to minimizing the Bayes risk. In other words, we have that for any loss function $\ell \geq 0$ (again under some regularity conditions ensuring finiteness and existence of stuff), we have
+
+$$
    \arg\min_{\hat \theta}\mathbb{E}_{X \sim m}\left[\mathbb{E}_{\theta_0 \sim \pi(\cdot \mid X)}[\ell(\hat \theta(X), \theta_0)]\right] = \arg\min_{\hat\theta}\mathbb{E}_{\theta_0 \sim \pi(\cdot \mid X)}[\ell(\hat \theta(X), \theta_0)].
-   $$
-   This is roughly self-evident if we think about it. An interesting consequence is that **any estimator minimizing a Bayes risk is a function of the posterior distribution**.2
+$$
+
+This is roughly self-evident if we think about it. An interesting consequence is that **any estimator minimizing a Bayes risk is a function of the posterior distribution**.2
 
 ## 2. Randomized estimation and information risk minimization
 
@@ -87,31 +111,41 @@ Let $\Theta$ be a model, let $X \sim Q$ be some data and let $\ell_\theta(X)$ be
 There may be a parameter $\theta_0\in\Theta$ minimizing the risk $R(\theta) = \mathbb{E}_{X\sim Q}[\ell_\theta(X)]$, which will then be our learning target. Now we consider *randomized* estimators taking the form $\theta\sim \hat \pi_X$, where $\hat\pi_X$ is a data-dependent distribution, and the performance of this estimation method can then be evaluated by the empirical risk $R_X (\hat\pi_X) = \mathbb{E}_{\theta \sim \hat \pi_X}[\ell_\theta(X)]$.
 
 Here we should be raising an eyebrow. There is typically no point in having the estimator $\theta$ being random, i.e. we typically will prefer to take $\hat \pi_X$ a point mass rather than anything else. But bear with me for a sec. The cool thing is that if we choose
+
 $$
 \hat \pi_X = \arg\min_{\hat \pi_X} \left\{R(\hat \pi_X) + D(\hat \pi_X \| \pi)\right\}, \tag{$*$}
 $$
+
 where $D(\hat \pi_X\| \pi) = \int \log \frac{d\hat \pi_X}{d\pi} \,d\hat \pi_X$ is the Kullback-Leibler divergence, then this distribution will satisfy
+
 $$
 d\hat \pi_X(\theta) \propto e^{-\ell_\theta(X)}d\pi(\theta).
 $$
+
 That is, Bayesian-type posteriors arise by minimizing the empirical risk of a randomized estimation scheme penalized by the Kullback-Leibler divergence form prior to posterior [(Zhang, 2006)](https://ieeexplore.ieee.org/document/1614067/).
 
 For the proof, write
+
 $$
 R_X(\hat \pi_X) + D(\hat \pi_X \| \pi) = \int \left(\ell_\theta(X) + \log\frac{d\hat \pi_X(\theta)}{d\pi(\theta)}\right) d\hat \pi_X (\theta)=\int\left(\log\frac{d\hat\pi_X(\theta)}{e^{-\ell_\theta(X)}d\pi(\theta)}\right)d\hat \pi_X(\theta)
 $$
+
 which is also equal to $D(d\hat \pi_X \| e^{-\ell_\theta(X)} d\pi)$ and, by properties of the Kullback-Leibler divergence, obviously minimized at $d\hat \pi_X \propto e^{\ell_\theta(X)}d\pi(\theta)$.
 
 Is this practically useful and insightful? Possibly. But at least this approach is suited to a general theory, as shown in Zhang (2006) and as I reproduce below.
 
 Let us introduce a Rényi-type generalization error defined, for $\alpha \in (0,1)$, by
+
 $$
 d_\alpha(\theta; Q) = -\alpha^{-1}\log\mathbb{E}_{X' \sim Q}[e^{-\alpha \ell_\theta(X')}].
 $$
+
 This is a measure of loss associated with the use of a parameter $\theta$ to fit new data $X' \sim Q$. We also write
+
 $$
 d_\alpha(\hat \pi_X; Q) = -\mathbb{E}_{\theta \sim \hat \pi_X}\left[ \alpha^{-1}\log\mathbb{E}_{X' \sim Q}[e^{-\alpha \ell_\theta(X')}] \right]
 $$
+
 for the expected Rényi generalization error when using the randomization scheme $\theta \sim \hat \pi_X$.
 
 In order to get interesting bounds on this generalization error, we follow the approach of Zhang (2006).
@@ -119,58 +153,80 @@ In order to get interesting bounds on this generalization error, we follow the a
 #### Change of measure inequality
 
 We'll need the change of measure inequality, which states that for any function $f$ and distributions $\pi$, $\hat \pi$ on $\Theta,$
+
 $$
 \mathbb{E}_{\theta \sim \hat\pi}[f(\theta)] \leq D(\hat \pi \| \pi) + \log \mathbb{E}_{\theta \sim \pi}\left[e^{f(\theta)}\right].
 $$
+
 Indeed, with some sloppyness and Jensen's inequality we can compute
+
 $$
 \log \int e^{f(\theta)}\pi(d\theta)\geq \int f(\theta)\log(d\pi/d\hat\pi(\theta))d\hat \pi = \mathbb{E}_{\theta \sim \hat \pi}[f(\theta)] - D(\hat \pi\|\pi).
 $$
 
+
 #### Generalization error bound
 
 We can now attempt bounding $d_\alpha(\hat \pi_X;Q)$. Consider the difference $\Delta_X (\theta) = d_\alpha(\theta;Q) - \ell_\theta(X)$ between the generalization error and the empirical loss corresponding to the use of a fixed parameter $\theta$. Then by the change of measure inequality,
+
 $$
 \exp\{\mathbb{E}_{\theta \sim \hat \pi_X}[\Delta_X(\theta)] - D(\hat \pi_X\|\pi)\} \leq \mathbb{E}_{\theta \sim \pi}\left[e^{\Delta_X(\theta)}\right]
 $$
+
 and hence for any $\pi$,
+
 $$
 \mathbb{E}_{X \sim Q}\left[\exp\left\{\mathbb{E}_{\theta \sim \hat \pi_X}[\Delta_X(\theta)] - D(\hat \pi_X\|\pi)\right\}\right] \leq \mathbb{E}_{X \sim Q}\left[\mathbb{E}_{\theta \sim \pi}\left[e^{\Delta_X(\theta)}\right]\right] = 1
 $$
+
 By Markov's inequality, this implies that $\forall t > 0$,
+
 $$
 \mathbb{P}\left(\mathbb{E}_{\theta \sim \hat \pi_X}[\Delta_X(\theta)] - D(\hat \pi_X\|\pi) \geq t\right) \leq e^{-t}.
 $$
+
 Rewriting yields
+
 $$
 d_\alpha(\hat \pi_X;Q) \leq R_X(\hat \pi_X) + D(\hat \pi_X\|\pi) + t
 $$
+
 with probability at least $1-e^{-t}$. To recap: the term $d_\alpha(\hat \pi_X;Q)$ is understood as a generalization error, on the right hand side $R_X(\hat \pi_X) = \mathbb{E}_{\theta \sim \hat \pi_X}[\ell_\theta(X)]$ is the empirical risk, the Kullback-Leibler divergence $D(\hat \pi_X\|\pi)$ penalizes the complexity of $\hat\pi_X$ seen as a divergence from a "prior" $\pi$, and $t$ is a tuning parameter.
 
 ## 3. Online learning, regret and Kullback-Leibler divergence
 
 Suppose we sequentially data points $X_1, X_2, X_3, \dots$ which are say i.i.d. with common distribution $Q$ with density $q$. At each time step $n$, the goal is to predict $X_{n+1}$ using the data $X^n = (X_1, \dots, X_n)$. Our prediction is not a point estimate of $X_{n+1}$, but somewhat similarly as in the randomized estimation scenario we output a density estimate $\hat p_n = p(\cdot \mid X^n)$, the goal being that $p(X_{n+1}\mid X^n)$ be as large as possible. A bit more precisely, we individually score a density estimate $\hat p_n$ through the risk $\ell_q(\hat p_n) = \mathbb{E}_{X_{n+1}\sim q}[\log(q(X_{n+1})/\hat p_n(X_{n+1} ))] = D(q\| \hat p_n)$ which is the Kullback-Leibler divergence between $\hat p_n$ and $q$. The *regret* over times $n=1, 2,\dots, N$ is the sum of the risk over the whole process, i.e.
+
 $$
 \text{regret} = \sum_{n=1}^N D(q\| \hat p_n).
 $$
+
 Formally, this process is equivalent to estimating the distribution of $X^N$ all at once: our density estimate $\hat p^N$ of $X^N$ would simply be
+
 $$
 \hat p^N(X^N) = \prod_{n=1}^N \hat p_n(X_n)
 $$
+
 and the regret is, by the chain rule, simply $D(q^N \| \hat p^N)$, where $q^N$ is the $N$th independent product of $q$.
 
 Given a prior $\pi$ over a space of distributions for $q$, our problem then to minimize the Bayes risk
+
 $$
 B_\pi(\hat p^N) = \mathbb{E}_{q\sim \pi} D(q^N\|\hat p^N).
 $$
+
 This is achieved by choosing $\hat p^N(x) = \hat p_\pi^N(x) = \int q^N(x) \pi(dq)$ the *prior predictive* density. This is equivalent to using, at each time step $n$, the poterior predictive density $\hat p_{n, \pi}(x) = \int q(x) \,\pi(dq\mid \{X _ i\} _{i=1}^n)$.
 
 To see this minimizing property of the Bayes average, it suffices to write
+
 $$
 B_\pi(\hat p^N) = \mathbb{E}_{q \sim \pi} \left[D(q^N\| \hat p_\pi^N)\right] + D(\hat p_\pi^N \| \hat p^N).
 $$
+
 Note that an consequence of this analysis is also that the posterior predictive distribution $\hat p_{n, \pi}$ will minimize the expected posterior risk:
+
 $$
 \hat p_{n, \pi} \in \arg\min_{\hat p_{n}} \mathbb{E}_{q \sim \pi(\cdot\mid X^n)}\left[D(q\|\hat p_n)\right].
 $$
+
 Following section 1, this furthermore means that the posterior predictive distribution minimizes the Bayes risk associated with the Kullback-Leibler loss.
