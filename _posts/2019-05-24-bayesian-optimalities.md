@@ -174,5 +174,3 @@ $$
 \hat p_{n, \pi} \in \arg\min_{\hat p_{n}} \mathbb{E}_{q \sim \pi(\cdot\mid X^n)}\left[D(q\|\hat p_n)\right].
 $$
 Following section 1, this furthermore means that the posterior predictive distribution minimizes the Bayes risk associated with the Kullback-Leibler loss.
-
-## 4. Model selection, adaptability and oracle property

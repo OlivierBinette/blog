@@ -45,7 +45,7 @@ This is, however, a rather convoluted way of going about comparing the two numbe
 
 ### A Dual perspective on nested model comparison
 
-The whole point of nested model comparison is to see if the new covariates in $\tilde X$, i.e. those that are not part of $\text{Span}(X)$, bring new information about $Y$. In the context of an exploratory analysis where the observations and predictors are all observed, we propose to change the perspective to following testing procedure:
+The whole point of nested model comparison is to see if the new covariates in $\tilde X$, i.e. those that are not part of $\text{Span}(X)$, bring new information about $Y$. In the context of an exploratory analysis where the observations and predictors are all observed, we propose to change our perspective to the following testing procedure:
 
 1. condition on the observation of $Y$ and $X$ (consider them fixed, observed values);
 2. tests if the new covariates in $\tilde X$ are random noise.
