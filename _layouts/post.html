@@ -19,11 +19,10 @@ layout: default
   {{ content }}
 </article>
 
-<aside class="related">
-<h4>Cite this post.</h4>
-Olivier Binette, "{{ post.title }}," <i>Proofs from the Notebook</i> (blog), {{ page.date | date_to_string }}, {{ page.url }}
-</aside>
-
+<hr>
+<h4>Cite this post:</h4>
+<small>Olivier Binette, "{{ post.title }}," <i>Proofs from the Notebook</i> (blog), {{ page.date | date_to_string }}, {{ site.url }}{{ page.url }}
+</small>
 
 {% if site.related_posts != empty %}
 <aside class="related">
