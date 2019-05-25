@@ -19,13 +19,15 @@ layout: default
   {{ content }}
 </article>
 
-<hr>
-<h4>Cite this post:</h4>
-<small>Olivier Binette, "{{ page.title }}," <i>Proofs from the Notebook</i> (blog), {{ page.date | date_to_string }}, {{ site.url }}{{ page.url }}
-</small>
 
 {% if site.related_posts != empty %}
 <aside class="related">
+  <h4>Cite this post:</h4>
+  <small>Olivier Binette, "{{ page.title }}," <i>Proofs from the Notebook</i> (blog),
+    {{ page.date | date_to_string }}, {{ site.url }}/blog{{ page.url }}.
+  </small>
+  &nbsp;
+
   <h3>Related posts</h3>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
