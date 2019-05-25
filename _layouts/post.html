@@ -22,7 +22,7 @@ layout: default
 
 {% if site.related_posts != empty %}
 <aside class="related">
-  <h4>Cite this post:</h4>
+  <h4>Cite this post</h4>
   <small>Olivier Binette, "{{ page.title }}," <i>Proofs from the Notebook</i> (blog),
     {{ page.date | date_to_string }}, {{ site.url }}/blog{{ page.url }}.
   </small>
@@ -33,7 +33,7 @@ layout: default
     {% for post in site.related_posts limit:3 %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <small>{{ post.title }}</small>
+          {{ post.title }}
           <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
         </a>
       </li>
