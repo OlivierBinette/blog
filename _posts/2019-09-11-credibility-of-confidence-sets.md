@@ -12,7 +12,7 @@ This statement by Greenman surprised me:
 
 It's not true that "this view may is harmless in perfect randomized experiments". In fact, even in the simplest possible cases, the posterior probability of a $95\%$ confidence interval can be pretty much anything.
 
-This is easy to show. Imagine a "perfect randomized experiment", where we use a test of the hypothesis $H_0: \mu = 0$ for which, for some reason, has zero power. If $p < 0.05$, meaning that the associated confidence interval excludes $0$, then we are certain that $H_0$ holds and the posterior probability of the confidence interval is zero.
+Imagine a "perfect randomized experiment", where we use a test of the hypothesis $H_0: \mu = 0$ for which, for some reason, has zero power. If $p < 0.05$, meaning that the associated confidence interval excludes $0$, then we are certain that $H_0$ holds and the posterior probability of the confidence interval is zero.
 
 Let this sink in. For some (albeit trivial) statistical tests, observing $p < 0.05$ brings evidence *in favor* of the null.
 
