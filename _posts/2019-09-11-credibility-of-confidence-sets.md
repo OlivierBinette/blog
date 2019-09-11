@@ -4,7 +4,7 @@ title: On the credibility of confidence sets
 categories: [Comment, p-values]
 ---
 
-Andrew Gelman and Sander Greenman went "head to head" in a [discussion on the interpretation of confidence intervals in *The BMJ*](https://www.bmj.com/content/366/bmj.l5381). Gelman argued for renaming confidence intervals to "uncertainty intervals", while Greenman prefered "compatibility intervals". 
+Andrew Gelman and Sander Greenman went "head to head" in a [discussion on the interpretation of confidence intervals in *The BMJ*](https://www.bmj.com/content/366/bmj.l5381).
 
 This statement by Greenman surprised me:
 
