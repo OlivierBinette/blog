@@ -15,3 +15,4 @@ Imagine a "perfect randomized experiment", where we use a test of the hypothesis
 Let this sink in. For some (albeit trivial) statistical tests, observing $p < 0.05$ brings evidence *in favor* of the null.
 
 The power of the test carries information, and the posterior probability of a confidence interval (or of an hypothesis), depends on this power among other things, even in perfect randomized experiments.
+
