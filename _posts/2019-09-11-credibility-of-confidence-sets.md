@@ -8,7 +8,7 @@ Andrew Gelman and Sander Greenman went "head to head" in a [discussion on the in
 
 > The label “95% confidence interval” evokes the idea that we should invest the interval with 95/5 (19:1) betting odds that the observed interval contains the true value (which would make the confidence interval a 95% bayesian posterior interval$^{11}$). This view may be harmless in a perfect randomized experiment with no background information to inform the bet (the original setting for the “confidence” concept); more often, however […]
 
-It's not true that "this view may is harmless in perfect randomized experiments", and I'm not sure what this "original setting of the confidence concept" is coming from. In fact, even in the simplest possible cases, the posterior probability of a $95\%$ confidence interval can be pretty much anything.
+It's not true that "this view may is harmless in perfect randomized experiments", and I'm not sure where this "original setting of the confidence concept" is coming from. In fact, even in the simplest possible cases, the posterior probability of a $95\%$ confidence interval can be pretty much anything.
 
 Imagine a "perfect randomized experiment", where we use a test of the hypothesis $H_0: \mu = 0$ for which, for some reason, has zero power. If $p < 0.05$, meaning that the associated confidence interval excludes $0$, then we are certain that $H_0$ holds and the posterior probability of the confidence interval is zero.
 

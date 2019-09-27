@@ -12,7 +12,7 @@ $$
 
 The well-known Jensen inequality states that $\mathcal{J}(\varphi, X) \geq 0$. For instance, if $\varphi(x) = x^2$, then $\mathcal{J}(\varphi, X) = \text{Var}(X) \geq 0$. If $\mu$ and $\nu$ are two probability measures, $X \sim \nu$ and $\varphi$ is convex with $\varphi(1) = 0$, then $\mathcal{J}(\varphi, \tfrac{d\mu}{d\nu}(X)) =: D_\varphi(\mu, \nu)$ is a so-called [$f$-divergence between probability measures](https://en.wikipedia.org/wiki/F-divergence) such as the total variation distance, the Kullback-Leibler divergence, the $\chi^2$ divergence, etc.
 
-If $X$ is bounded, then a converse to the Jensen inquality can be easily obtained as follows: let $m$ and $M$ be the infimum and maximum of $X$, and write $X = \alpha m + (1-\alpha)M$ for some random variable $\alpha$ taking values in $[0,1]$. Then $\mathbb{E}[\alpha] = (M - \mu)/(M-m)$ and consequently with $\mu:= \mathbb{E}[X]$,
+If $X$ is bounded, then a converse to the Jensen inequality can be easily obtained as follows: let $m$ and $M$ be the infimum and maximum of $X$, and write $X = \alpha m + (1-\alpha)M$ for some random variable $\alpha$ taking values in $[0,1]$. Then $\mathbb{E}[\alpha] = (M - \mu)/(M-m)$ and consequently with $\mu:= \mathbb{E}[X]$,
 
 $$
 \mathcal{J}(\varphi, X) \leq \mathbb{E}[\alpha\phi(m) + (1-\alpha)\phi(M)] - \varphi(\mu)\\
