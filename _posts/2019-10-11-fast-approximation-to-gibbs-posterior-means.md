@@ -57,7 +57,7 @@ An important (both useful and somewhat annoying) feature of Gibbs posterior dist
 
 Ok, enough background material. Let's get to the meat of this post.
 
-# Approximating Gibbs posterior mean computation (an early idea)
+## Approximating Gibbs posterior mean computation (an early idea)
 
 I think (even though I have no precise idea yet) that there is an interesting relationship between the the choice of the scale of the loss functions previously mentionned, the process of iterating Gibbs posterior computation and the gradient descent algorithm used to compute empirical risk minimizers.
 
