@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Early idea to approximate Gibbs posterior means
+title: Idea to approximate Gibbs posterior means
 categories: [Research, Computation, Bayesian Theory]
 ---
 
