@@ -4,7 +4,7 @@ title: Idea to approximate Gibbs posterior means
 categories: [Research, Computation, Bayesian Theory]
 ---
 
-Consider the statistical learning framework where we have data $X\sim Q$ for some unknown distribution $Q$, that we have a model $\Theta$ and a loss function $\ell_\theta(X)$ measuring a cost associated with fitting the data $X$ using a particular $\theta\in\Theta$. Our goal is to use the data to learn about parameters which minimize the risk $R(\theta) = \mathbb{E}[\ell_\theta(X)]$. Here are two standard examples.
+Consider the statistical learning framework where we have data $X\sim Q$ for some unknown distribution $Q$, a model $\Theta$ and a loss function $\ell_\theta(X)$ measuring a cost associated with fitting the data $X$ using a particular $\theta\in\Theta$. Our goal is to use the data to learn about parameters which minimize the risk $R(\theta) = \mathbb{E}[\ell_\theta(X)]$. Here are two standard examples.
 
 **Density estimation.** Suppose we observe independent random variables $X_1, X_2, \dots, X_n$. Here the model $\Theta$ parametrizes a set $\mathcal{M} = \{p_\theta : \theta \in \Theta \}$ of probability density functions (with respect to some dominating measure on the sample space), and our loss for $X = (X_1, \dots, X_n)$ is defined as
 $$
