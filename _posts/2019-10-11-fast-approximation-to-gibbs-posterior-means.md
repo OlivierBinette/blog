@@ -49,6 +49,8 @@ Note that this is very preliminary work. We're still in the process of exploring
 
 
 
+<!--more-->
+
 ### Interpolating between Empirical risk minimization and model averages
 
 An important (both useful and somewhat annoying) feature of Gibbs posterior distributions is that they depend on the scale at which the losses are specified. That is, if considering the alternative losses $\tilde \ell_\theta(X) = \eta \ell_\theta(X)$ for some $\eta > 0$ yields a completely different Gibbs posterior distribution. As $\eta \rightarrow \infty$, we can expect the posterior distribution to converge to the empirical risk minimizer (if it exists), whereas for small $\eta$, the posterior distribution should be more vague. Choosing this scale is an open problem for which a few interesting solutions have been recently proposed.
