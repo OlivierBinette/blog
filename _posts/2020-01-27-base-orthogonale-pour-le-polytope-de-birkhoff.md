@@ -96,7 +96,7 @@ $$
 
 ## Conditions pour l'appartenance à $\mathfrak{B}_n^d$
 
-Considérons tout d'abord le cas $d = 2$. Fixons $n \in \N$ et considérons la base orthogonale $\mathcal{B}$ du sous-espace vectoriel $V$ attaché à $\mathfrak{B}_n$, donnée dans la section précédente. On souhaite trouver des conditions sur les combinaisons linéaires d'éléments de $\mathcal{B}$ pour qu'elles soient dans $\mathfrak{B}_n - [\frac{1}{n}]_{i, j=1}^n$. On appliquera ensuite la translation $b \mapsto b+[\frac{1}{n}]_{i, j=1}^n$ pour se ramener dans $\mathfrak{B}_n$.
+Considérons tout d'abord le cas $d = 2$. Fixons $n \in \N$ et considérons la base orthogonale $\mathcal{B}$ du sous-espace vectoriel $V$ attaché à $\mathfrak{B}_n$, donnée dans la section précédente. On souhaite trouver des conditions sur les combinaisons linéaires d'éléments de $\mathcal{B}$ pour qu'elles soient dans $\mathfrak{B} _ n - [\frac{1}{n}] _ {i, j=1}^n$. On appliquera ensuite la translation $b \mapsto b+[\frac{1}{n}]_{i, j=1}^n$ pour se ramener dans $\mathfrak{B}_n$.
 
 Soient $c_{i, j} \in \R$, $b_{i, j}$ les éléments de $\mathcal{B}$, et $b = \sum_{i, j =1}^{n-1}c_{i, j} b_{i, j}$. Alors, $b \in \mathfrak{B}_n - [\frac{1}{n}]_{i, j=1}^n$ si et seulement si $b(x, y) \ge -\frac{1}{n}$, pour tout $1 \le x, y \le n$. En notant $[a_{i, j}]_{i, j}= [a_{i, j}]_{i, j=1}^{n-1}$, calculons $b(x, y)$:
 $$
