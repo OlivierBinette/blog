@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Base orthogonale pour le polytope de Birkhoff
+title: Base orthogonale pour le polytope de Birkhoff (matrices stochastiques planes)
 categories: [Misc]
 ---
 
