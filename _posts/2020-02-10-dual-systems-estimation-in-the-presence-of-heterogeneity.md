@@ -45,7 +45,7 @@ $$
 p(x) := \mathbb{E}[p_i(x)] = \prod_{j=1}^2 p_{j}^{x_j}(1-p_j)^{1-x_j} + (-1)^{x_1x_2}\text{Cov}(p_{i,1}, p_{i,2}).
 $$
 
-Writing $n _ x = \# \{i: X _ i = x\} $ for the number of individuals with capture pattern $x$ and $\eta _ x = \mathbb{E}[n _ x]$, we also find $\eta _ x = N p(x)$ and therefore, by the above,
+Writing $n _ x = | \{i \mid X _ i = x\} | $ for the number of individuals with capture pattern $x$ and $\eta _ x = \mathbb{E}[n _ x]$, we also find $\eta _ x = N p(x)$ and therefore, by the above,
 
 $$
 \frac{\eta_{(0,0)}\eta_{(1,1)}}{\eta_{(1,0)}\eta_{(0,1)}} = \frac{\left( (1-p_1)(1-p_2) + \rho\right)\left( p_1p_2  + \rho\right)}{\left( p_1(1-p_2) - \rho\right)\left( (1-p_1)p_2 - \rho\right)} = r(\rho, a, b).
